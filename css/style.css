@@ -32,7 +32,7 @@ body {
   font-family: Roboto, sans-serif;
   color: var(--main-color-text);
   background-color: var(--first-background);
-}
+  }
 /* зняття підкреслення */
 .underline {
   text-decoration: none;
@@ -88,36 +88,64 @@ textarea {
 }
 /* Стилізація чорного кольору для логотипу */
 .logo-link {
-  text-decoration: none;
-  color: var(--first-logo-color);
-  font-family: Raleway, sans-serif;
+   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  margin-right: 93px;
-  padding-bottom: 24px;
-  padding-top: 24px;
+    font-size: 24px;
+    line-height: 1.16px;
+    letter-spacing: 0.03em;
+      color: var(--first-logo-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .logo-link {   
+            font-size: 26px;
+      line-height: 1.19;
+           padding-bottom: 25px;
+      padding-top: 24px;;
+  }
 }
 .header-nav {
   display: flex;
   align-items: center;
 }
 .main-nav {
-  display: flex;
+   display: flex;
+}
+@media screen and (min-width: 768px) {
+  .main-nav {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main-nav {
+    display: flex;
+    align-items: center;
+  }
 }
 
+.list.nav {
+  display: none;
+}
+@media screen and (min-width:768px){
+  .list.nav{
+    display: flex;
+    margin-left: 88px;
+  }
+}
+@media screen and (min-width:1200px) {
+  .list.nav{
+    margin-left: 93px;
+  }
+}
 /* розтягнення навігації */
 .item > .nav {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
 }
-
 /* Стилізація студії-як поточної сторінки */
 .current-studio {
-  text-decoration: none;
-  color: var(--accent-color);
+    color: var(--accent-color);
 }
 .current-studio::after {
   position: absolute;
@@ -143,7 +171,6 @@ textarea {
 }
 /* Стилізація портфоліо для html */
 .portfolio {
-  text-decoration: none;
   color: var(--main-color-text);
 }
 /* Стилізація портфоліо-ефект фокус і ховер */
@@ -153,19 +180,14 @@ textarea {
 }
 /* Стилізація контактів */
 .contacts {
-  text-decoration: none;
-  color: var(--main-color-text);
+    color: var(--main-color-text);
 }
 /*  Стилізація контаків-ефект ховеру, фокусу */
 .contacts:hover,
 .contacts:focus {
   color: var(--accent-color);
 }
-.list.nav {
-  margin-top: 0;
-  display: flex;
-  margin-bottom: 0;
-}
+
 /* .nav .item:last-child{
   margin-right: 0;
 } */
@@ -173,19 +195,33 @@ textarea {
 /* .nav .item:not(:last-child){
   margin-right: 50px;
 } */
+
 .nav .item + .item {
   margin-left: 50px;
 }
 
 /* стилізація конверту і мейлу */
-
+.list.auth{
+  display: none;
+}
+@media screen and (min-width:768px) {
+  .list.auth{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 45px;
+  }
+}
+@media screen and (min-width:1200px) {
+  .list.auth{
+    align-items: baseline;
+  }
+}
 .icon {
   display: flex;
   align-items: baseline;
 }
 .mail {
-  text-decoration: none;
-  color: var(--second-color-text);
+   color: var(--second-color-text);
 }
 .icon-envelope {
   margin-right: 10px;
@@ -196,6 +232,20 @@ textarea {
 .mail.nav {
   align-items: center;
   display: flex;
+}
+@media screen and (min-width:768px) {
+.mail.nav{
+  padding-top: 21px;
+  padding-bottom: 10px;
+  font-size: 12px;
+    line-height: 1.16;
+}
+}
+@media screen and (min-width:1200px) {
+  .mail.nav {
+    font-size: 14px;
+      line-height: 1.14;
+  }
 }
 /* налаштування фокусу і ховеру для мейл */
 .mail:hover,
@@ -211,14 +261,105 @@ textarea {
   cursor: pointer;
   vertical-align: middle;
 }
-
-.tel {
+.menu-container{
+  position: fixed;
+   top: 0;
+  left: 0;
+  display: flex;
+    flex-direction: column;
+  width: 100vw;
+   height: 100vh;
+       padding-left: 40px;
+      padding-top: 48px;
+     background-color: yellow;
+    transform: translateX(100%);
+    transition: transform 250ms linear;
+       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+}
+.menu-container.is-open{
+  transform: translateX(0);
+}
+.mobile-menu{
+  margin-bottom: auto;
+}
+.mobile-menu-item:not(:last-child){
+margin-bottom: 32px;
+}
+.mobile-menu-link{
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: var(--main-color-text);
   text-decoration: none;
-  color: var(--second-color-text);
+}
+.mobile-menu-link:hover,
+.mobile-menu-link:focus{
+  color: var(--accent-color);
+}
+.mobile-contacts-item{
+  margin-bottom: 32px;
+  }
+.mobile-contacts-tel{
+  font-weight: 500;
+    font-size: 34px;
+    line-height: 1.17;
+      color: var(--main-color-text);
+    letter-spacing: 0.02em;
+    }
+.mobile-contacts-tel:hover,
+.mobile-contacts-tel:focus{
+  color: var(--accent-color);
+}
+.mob-contacts-item{
+  margin-bottom: 64px;
+}
+.mobile-contacts-mail{
+  font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+      color: var(--second-color-text);
+      }
+.mobile-social{
+  display: flex;
+  margin-bottom: 48px;
+}
+.mobile-social-link{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+         letter-spacing: 0.02em;
+    color: var(--accent-color);
+    text-decoration: none;
+  }
+.mobile-social-item:not(:first-child)::before{
+  content: " ";
+   width: 22px;
+  height: 0;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+    transform: rotate(90deg);
+    margin-right: 10px;
+    margin: 10px;
+}
+.tel {
+    color: var(--second-color-text);
 }
 .tel.nav {
   display: flex;
   align-items: center;
+}
+@media screen and (min-width:768px) {
+  .tel.nav {
+    font-size: 12px;
+      line-height: 1.16;
+      padding-top: 0;
+      padding-bottom: 21px;
+  }
+}
+@media screen and (min-width:1200px) {
+  .tel.nav{
+    margin-left: 40px;
+  }
 }
 /* Стилізація телефону-ефект ховеру і фокусу */
 .tel:hover,
@@ -228,20 +369,43 @@ textarea {
 .auth {
   margin-top: 0;
   display: flex;
-  margin-bottom: 0;
-  margin-left: auto;
+   margin-bottom: 0;
+  margin-left: auto; 
 }
 .auth .item + .item {
-  margin-left: 50px;
+  /* margin-left: 50px; */
+}
+.menu-toggle{
+  position: absolute;
+    top: 10px;
+    right: 15px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: auto;
+}
+.menu-toggle:hover,
+.menu-toggle:focus{
+  fill: var(--accent-color);
+}
+.icon-export-menu:hover,
+.icon-export-menu:focus{
+  fill:var(--accent-color)
+}
+@media screen and (min-width:768px) {
+  .menu-toggle{
+    display: none;
+  }
 }
 /* Стилізація  фону "героя" */
 .hero {
   text-align: center;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/img-hero1.jpg);
+  /* background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/img-hero1.jpg); */
   background-repeat: no-repeat;
   background-size: cover;
-  height: 600px;
+  height: 400px;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
@@ -250,39 +414,48 @@ textarea {
 /* стилізація тексту героя */
 .hero-title {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  padding-top: 200px;
-
+  font-size: 26px;
+  line-height: 1.62;
+  padding-top: 118px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--first-background);
-  margin-top: 0;
-  margin-bottom: 30px;
+   margin-bottom: 30px;
 }
+/* екран компютера */
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    padding-top: 200px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+
 /* Стилізація кнопки в герої */
 .hero-button {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
-
   color: var(--first-background);
   background-color: var(--accent-color);
   cursor: pointer;
   min-width: 216px;
-  padding-right: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 32px;
-  padding-right: 32px;
-  border-radius: 4px;
-  margin-bottom: 200px;
+   padding: 10px 24px;
+    border-radius: 4px;
+  margin-bottom: 118px;
   border: transparent;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+@media screen and (min-width:1200px){
+  .hero-button {
+    margin-bottom: 200px;
+  }
+}
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -434,7 +607,7 @@ textarea {
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-decoration-line: underline;
-  color: #2196f3;
+  color: var(--accent-color);
 }
 .form-checkbox {
   margin-bottom: 30px;
@@ -845,8 +1018,7 @@ textarea {
 /* СТИЛІЗAЦІЯ ПОРТФОЛІО */
 /*  Стилізація студіо*/
 .studio {
-  text-decoration: none;
-  color: var(--main-color-text);
+    color: var(--main-color-text);
   /*  Стилізація "студії-ефект ховеру і фокусу" */
 }
 .studio:hover,
@@ -855,8 +1027,7 @@ textarea {
 }
 /* Стилізація портфоліо */
 .current-portfolio {
-  text-decoration: none;
-  color: #2196f3;
+    color: var(--accent-color);
 }
 .current-portfolio::after {
   position: absolute;
