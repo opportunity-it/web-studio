@@ -208,7 +208,7 @@ textarea {
   .list.auth{
     display: flex;
     flex-wrap: wrap;
-    margin-left: 45px;
+    margin-left: auto;
   }
 }
 @media screen and (min-width:1200px) {
@@ -347,8 +347,7 @@ margin-bottom: 32px;
 }
 .tel.nav {
   display: flex;
-  align-items: center;
-}
+  }
 @media screen and (min-width:768px) {
   .tel.nav {
     font-size: 12px;
@@ -373,13 +372,22 @@ margin-bottom: 32px;
    margin-bottom: 0;
   margin-left: auto; 
 }
-.auth .item + .item {
-  /* margin-left: 50px; */
-}
+/* .auth .item + .item {
+  margin-left: 50px;
+} */
 .menu-button{
   margin-left: auto;
   background-color: transparent;
     border: none;
+}
+@media screen and (min-width:768px) {
+.menu-button{
+  display: none;
+}
+}
+.menu-button:hover,
+.menu-button:focus{
+  color: var(--accent-color);
 }
 .menu-toggle{
   position: absolute;
@@ -642,6 +650,9 @@ margin-bottom: 32px;
 .features-list {
   display: flex;
   margin-left: -30px;
+}
+@media screen and (min-width:768px) {
+  .features-list
 }
 .features-list .item {
   flex-basis: calc((100% - 90px) / 4);
