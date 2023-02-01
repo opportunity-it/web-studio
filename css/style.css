@@ -1046,14 +1046,6 @@ padding-bottom: 50px;
   margin-right: 0;
 }
 /* вирівнювання футера */
-.container.footer {
-display: inline-block;
-}
-@media screen and (min-width:768px) {
-.container.footer{
-
-}
-}
 @media screen and (min-width:1200px) {
   .container.footer {
 display: flex;
@@ -1140,9 +1132,13 @@ margin-bottom: 9px;
 
 /* фон для футера */
 .general {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background-color: var(--footer-background-color);
+    background-color: var(--footer-background-color);
+}
+@media screen and (min-width:1200px) {
+  .general{
+    padding-top: 60px;
+      padding-bottom: 60px;
+  }
 }
 .logo-link-footer {
 margin-left: auto;
