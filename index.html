@@ -243,20 +243,33 @@
                     <ul class="list work">
                         <li class="item">
                             <div class="position-item">
-                            <img class="image-work" src="./images/computer.jpg" alt="робота з комп'ютером" width="370" height="294">
+                            <img class="image-work" 
+                              srcset="./images/computer-desktop_370.jpg 1x, ./images/computer-desktop_740.jpg 2x"      
+                            src="./images/computer-desktop_370.jpg " 
+                            alt="робота з комп'ютером" 
+                            width="370" height="294">
                     <p class="position-text">Десктопні додатки</p>
                         </div>
                         </li>
                         <li class="item">
                             <div class="position-item">
-                            <img class="image-work" src="./images/phone.jpg" alt="робота з телефоном" width="370" height="294" >
+                            <img class="image-work"
+                            srcset="./images/mobile-dodatky-desktop_370.jpg 1x, ./images/mobile-dodatky-desktop_740.jpg 2x"
+                             src="./images/mobile-dodatky-desktop_370.jpg"
+                              alt="робота з телефоном"
+                               width="370" height="294" >
                     <p class="position-text">Мобільні додатки</p>
                         </div>
                         </li>
                         <li class="item">
                             <div class="position-item">
-                            <img class="image-work" src="./images/tablet.jpg" alt="робота з планшетом" width="370" height="294">
-                        <p class="position-text">Дизайнерські рішення</p>
+                            <img class="image-work" 
+                            srcset="./images/design-rishennya-desktop_370.jpg 1x, ./images/design-rishennya-desktop_740.jpg 2x"
+                            src="./images/design-rishennya-desktop_370.jpg"
+                             alt="робота з планшетом"
+                              width="370" height="294"
+                              >
+                             <p class="position-text">Дизайнерські рішення</p>
                         </div>
                         </li>
                     </ul>
@@ -268,7 +281,52 @@
                     <h2 class="team-title">Наша команда</h2>
                     <ul class="list team">
                         <li class="item">
-                        <img class="team-img" src="./images/ihor.jpg" alt="Product Designer" width="270" height="260">
+                        <picture>
+                            <!-- desktop -->
+                            <source media="(min-width: 1200px)" srcset="./images/ihor-desktop@1x.jpg 1x,
+                            ./images/ihor-desktop@2x.jpg 2x"
+                            type="image/jpg"
+                            >
+                            <source media="(min-width: 1200px)" srcset="./images/ihor-desktop@1x.webp 1x,
+                            ./images/ihor-desktop@2x.webp 2x"
+                            type="image/webp"
+                            >
+                            <!-- tablet -->
+                            <source media="(min-width: 768px)" srcset="./images/ihor-tablet@1x.jpg 1x,
+                            ./images/ihor-desktop@2x.jpg 2x"
+                            type="image/jpg">
+                            <source media="(min-width: 768px)" srcset="./images/ihor-tablet@1x.webp 1x,
+                             ./images/ihor-desktop@2x.webp 2x"
+                             type="image/webp"
+                             >
+                            <!-- mobile -->
+                            <source media="(min-width: 480px)" srcset="./images/ihor-mob@1x.jpg 1x,
+                            ./images/ihor-mob@2x.jpg 2x"
+                            type="image/jpg"
+                            >
+                            <source media="(min-width: 480px)" srcset="./images/ihor-mob@1x.webp 1x,
+                             ./images/ihor-mob@2x.webp 2x"
+                             type="image/webp"
+                             >
+                        <img class="team-img"
+                        src="./images/ihor-mob_450.jpg"
+                         alt="Product Designer"
+                          > 
+                        </picture>
+                            <!-- screen size = 480px / dpr = 2 == 418px * 3 = 836px 
+                        <img class="team-img" 
+                         srcset="
+                         ./images/ihor-mob_450.jpg 450w,
+                         ./images/ihor-mob_900.jpg 900w,
+                         ./images/ihor-tablet_354.jpg 354w,
+                         ./images/ihor-tablet_708.jpg 708w,
+                         ./images/ihor-desktop_270.jpg 270w,
+                         ./images/ihor-desktop_540.jpg 540w
+                         "
+                         sizes="(min-width:1200px) 270px, (min-width:768px) 354px, (min-width:480px) 450px, 100vw" 
+                        src="./images/ihor-mob_450.jpg"
+                         alt="Product Designer"
+                          width="450" height="460"> -->
                             <h3 class="team-title-name">Ігор Дем'яненко</h3> 
                            <p class="team-text">Product Designer</p>
                        <ul class="social-icons list">
@@ -301,8 +359,31 @@
                             </svg>
                            </a></li>
                        </ul>
-                                               <li class="item">
-                            <img class="team-img" src="./images/olha.jpg" alt="Frontend Developer" width="270" height="260">
+                       <li class="item">
+                         <picture>
+                            <source media="(min-width: 1200px)" srcset="./images/olha-desktop_270.jpg 1x,
+                            ./images/olha-desktop_540.jpg 2x">
+                            <source media="(min-width: 768px)" srcset="./images/olha-tablet_354.jpg 1x,
+                             ./images/olha-tablet_708.jpg 2x">
+                            <source media="(min-width: 480px)" srcset="./images/olha-mob_450.jpg 1x,
+                             ./images/olha-mob_900.jpg 2x">
+                            <img class="team-img"
+                             src="./images/olha-mob_450.jpg"
+                             alt="Frontend Developer">
+                              </picture>   
+                            <!-- <img class="team-img" 
+                            srcset="
+                         ./images/olha-mob_450.jpg 450w,
+                         ./images/olha-mob_900.jpg 900w,
+                         ./images/olha-tablet_354.jpg 354w,
+                         ./images/olha-tablet_708.jpg 708w,
+                         ./images/olha-desktop_270.jpg 270w,
+                         ./images/olha-desktop_540.jpg 540w
+                         "
+                         sizes="(min-width:1200px) 270px, (min-width:768px) 354px, (min-width:480px) 450px, 100vw"
+                            src="./images/olha-mob_450.jpg"
+                             alt="Frontend Developer"
+                              width="450" height="460"> -->
                             <h3 class="team-title-name">Ольга Рєпіна</h3>
                         <p class="team-text">Frontend Developer</p>
                         <ul class="social-icons list">
@@ -338,7 +419,30 @@
                         
                         </li>  
                         <li class="item">
-                            <img class="team-img" src="./images/nick.jpg" alt="Marketing" width="270" height="260">
+                            <picture>
+                                <source media="(min-width:1200px )" srcset="./images/mykola-desktop_270.jpg 1x,
+                                ./images/mykola-desktop_540.jpg 2x">
+                                <source media="(min-width:768px )" srcset="./images/mykola-tablet_354.jpg 1x,
+                                 ./images/mykola-tablet_708.jpg 2x">
+                                <source media="(min-width:480px )" srcset="./images/mykola-mob_450.jpg 1x,
+                                 ./images/mykola-mob_900.jpg 2x">
+                            <img class="team-img"
+                            src="./images/mykola-mob_450.jpg"
+                            alt="Marketing" 
+                            >
+                              </picture>
+                            <!-- <img class="team-img" 
+                            srcset="
+                         ./images/mykola-mob_450.jpg 450w,
+                         ./images/mykola-mob_900.jpg 900w,
+                         ./images/mykola-tablet_354.jpg 354w,
+                         ./images/mykola-tablet_708.jpg 708w,
+                         ./images/mykola-desktop_270.jpg 270w,
+                         ./images/mykola-desktop_540.jpg 540w"
+                            sizes="(min-width:1200px) 270px, (min-width:768px) 354px, (min-width:480px) 450px, 100vw"
+                            src="./images/mykola-mob_450.jpg"
+                            alt="Marketing" 
+                             width="450" height="460"> -->
                             <h3 class="team-title-name"> Микола Тарасов</h3>
                             <p class="team-text">Marketing</p>
                             <ul class="social-icons list">
@@ -374,7 +478,33 @@
                            
                         </li>   
                         <li class="item">
-                            <img class="team-img" src="./images/mykhaylo.jpg" alt="UI Designer" width="270" height="260">
+                            <picture>
+                                <source media="(min-width:1200px)" srcset="./images/mykhaylo-desktop_270.jpg 1x,
+                                ./images/mykhaylo-desktop_540.jpg 2x">
+                                <source media="(min-width:768px )" srcset="./images/mykhaylo-tablet_354.jpg 1x,
+                                /images/mykhaylo-tablet_708.jpg 2x">
+                                <source media="(min-width:480px)" srcset="./images/mykhaylo-mob_450.jpg 1x,
+                                ./images/mykhaylo-mob_900.jpg 2x">
+                            <img class="team-img"
+                            src="./images/mykhaylo-mob_450.jpg"
+                             alt="UI Designer"
+                            >
+                            </picture>
+
+
+                            <!-- <img class="team-img" 
+                            srcset="
+                         ./images/mykhaylo-mob_450.jpg 450w,
+                         ./images/mykhaylo-mob_900.jpg 900w,
+                         ./images/mykhaylo-tablet_354.jpg 354w,
+                         ./images/mykhaylo-tablet_708.jpg 708w,
+                         ./images/mykhaylo-desktop_270.jpg 270w,
+                         ./images/mykhaylo-desktop_540.jpg 540w
+                         "
+                         sizes="(min-width:1200px) 270px, (min-width:768px) 354px, (min-width:480px) 450px, 100vw"
+                             src="./images/mykhaylo-mob_450.jpg"
+                             alt="UI Designer"
+                              width="450" height="460"> -->
                             <h3 class="team-title-name">Михайло Єрмаков</h3>
                             <p class="team-text">UI Designer</p>
                             <ul class="social-icons list">
@@ -521,7 +651,7 @@
                 </ul>
                </div>
             <div class="general-form-footer">
-                <form class="form-footer">
+                <form class="form-footer section">
                     <label for="mail"></label>
                     <p class="form-text">Підпишіться на розсилку</p>
                  <input type="email" name="mail" id="mail" placeholder="E-mail" class="form-input">
