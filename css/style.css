@@ -466,7 +466,7 @@ margin-bottom: 32px;
         url(../images/hero-img-tablet_768.jpg);
   }
 }
-@media screen and (min-width:481px)and (min-device-pixel-ratio: 2),
+@media screen and (min-width:481px) and (min-device-pixel-ratio: 2),
 (min-resolution: 192dpi),
 (min-resolution: 2dppx){
   .hero {
@@ -1104,12 +1104,13 @@ align-items: flex-start;
 display: flex;
   align-items: baseline;
   padding-top: 0;
-  gap: 94px;
+  
   }
 }
 .logo-link.footer {
   display: flex;
     justify-content: center;
+    text-decoration: none;
 }
 @media screen and (min-wdth:768px) {
   .logo-link.footer{
@@ -1206,9 +1207,8 @@ margin-right: 176px;
 }
 @media screen and (min-width:1200px) {
   .logo-link-footer {
-    /* width: 231px; */
-    margin-left: 0;
-    margin-right: 0;
+        margin-left: 0;
+    margin-right: 70px;
   }
 }
 .text-social-link {
@@ -1217,7 +1217,6 @@ margin-right: 176px;
 @media screen and (min-width:768px) {
   .text-social-link{
 margin-right: 89px;
-padding-top: 14px;
   }
 }
 @media screen and (min-width:1200px) {
@@ -1297,17 +1296,17 @@ justify-content: flex-start;
 }
 .general-form-footer {
   margin-left: auto;
+ 
 }
 @media screen and (min-width:768px) {
-  .general-form-footer{
-    margin-right: auto;
-    margin-left: auto;
-  }
+.general-form-footer{
+
+}
 }
 @media screen and (min-width:1200px) {
   .general-form-footer {
-    margin-right: auto;
-    margin-left: 0;
+      margin-left: auto;
+      ;
   }
 }
 .form-footer{
@@ -1372,7 +1371,7 @@ margin: 0;
   .form-input {
     width: 358px;
         height: auto;
-        margin-right:11px;
+        margin-right:12px;
 }
 }
 .form-icon {

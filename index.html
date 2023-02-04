@@ -244,8 +244,8 @@
                         <li class="item">
                             <div class="position-item">
                             <img class="image-work" 
-                              srcset="./images/computer-desktop_370.jpg 1x, ./images/computer-desktop_740.jpg 2x"      
-                            src="./images/computer-desktop_370.jpg " 
+                              srcset="./images/desktop-dodatky-desktop_370.jpg 1x, ./images/desktop-dodatky-desktop_370.jpg 2x"      
+                            src="./images/desktop-dodatky-desktop_370.jpg " 
                             alt="робота з комп'ютером" 
                             width="370" height="294">
                     <p class="position-text">Десктопні додатки</p>
@@ -283,31 +283,36 @@
                         <li class="item">
                         <picture>
                             <!-- desktop -->
-                            <source media="(min-width: 1200px)" srcset="./images/ihor-desktop@1x.jpg 1x,
+                            <source media="(min-width: 1200px)" srcset="
+                            ./images/ihor-desktop@1x.webp 1x,
+                            ./images/ihor-desktop@2x.webp 2x" type="image/webp">
+                            <source media="(min-width: 1200px)" srcset="
+                            ./images/ihor-desktop@1x.jpg 1x,
                             ./images/ihor-desktop@2x.jpg 2x"
                             type="image/jpg"
                             >
-                            <source media="(min-width: 1200px)" srcset="./images/ihor-desktop@1x.webp 1x,
-                            ./images/ihor-desktop@2x.webp 2x"
+                            <!-- tablet -->
+                            <source media="(min-width: 768px)" srcset="
+                            ./images/ihor-tablet@1x.webp 1x,
+                            ./images/ihor-tablet@2x.webp 2x"
+                             type="image/webp">
+                            <source media="(min-width: 768px)" srcset="
+                            ./images/ihor-tablet@1x.jpg 1x,
+                            ./images/ihor-tablet@2x.jpg 2x"
+                            type="image/jpg"
+                            >
+                             <!-- mobile -->
+                            <source media="(min-width: 480px)" srcset="
+                            ./images/ihor-mob@1x.webp 1x,
+                            ./images/ihor-mob@2x.webp 2x" 
                             type="image/webp"
                             >
-                            <!-- tablet -->
-                            <source media="(min-width: 768px)" srcset="./images/ihor-tablet@1x.jpg 1x,
-                            ./images/ihor-desktop@2x.jpg 2x"
-                            type="image/jpg">
-                            <source media="(min-width: 768px)" srcset="./images/ihor-tablet@1x.webp 1x,
-                             ./images/ihor-desktop@2x.webp 2x"
-                             type="image/webp"
-                             >
-                            <!-- mobile -->
-                            <source media="(min-width: 480px)" srcset="./images/ihor-mob@1x.jpg 1x,
+                            <source media="(min-width: 480px)" srcset="
+                            ./images/ihor-mob@1x.jpg 1x,
                             ./images/ihor-mob@2x.jpg 2x"
                             type="image/jpg"
                             >
-                            <source media="(min-width: 480px)" srcset="./images/ihor-mob@1x.webp 1x,
-                             ./images/ihor-mob@2x.webp 2x"
-                             type="image/webp"
-                             >
+                           
                         <img class="team-img"
                         src="./images/ihor-mob_450.jpg"
                          alt="Product Designer"
@@ -361,12 +366,37 @@
                        </ul>
                        <li class="item">
                          <picture>
-                            <source media="(min-width: 1200px)" srcset="./images/olha-desktop_270.jpg 1x,
-                            ./images/olha-desktop_540.jpg 2x">
-                            <source media="(min-width: 768px)" srcset="./images/olha-tablet_354.jpg 1x,
-                             ./images/olha-tablet_708.jpg 2x">
-                            <source media="(min-width: 480px)" srcset="./images/olha-mob_450.jpg 1x,
-                             ./images/olha-mob_900.jpg 2x">
+                            <source media="(min-width: 1200px)" srcset="
+                            ./images/olha-desktop_270.webp 1x,
+                            ./images/olha-desktop_540.webp 2x"
+                            type="image/webp"
+                            >
+                            <source media="(min-width: 1200px)" srcset="
+                            ./images/olha-desktop_270.jpg 1x,
+                            ./images/olha-desktop_540.jpg 2x"
+                            type="image/jpg"
+                            >
+
+                            <source media="(min-width: 768px)" srcset="
+                            ./images/olha-tablet_354.webp 1x,
+                            ./images/olha-tablet_708.webp 2x"
+                            type="image/webp">
+                            <source media="(min-width: 768px)" srcset="
+                            ./images/olha-tablet_354.jpg 1x,
+                             ./images/olha-tablet_708.jpg 2x"
+                             type="image/jpg"
+                             >
+                           
+                            <source media="(min-width: 480px)" srcset="
+                            ./images/olha-mob_450.webp 1x,
+                            ./images/olha-mob_900.webp 2x"
+                            type="image/webp"
+                            >
+                            <source media="(min-width: 480px)" srcset="
+                            ./images/olha-mob_450.jpg 1x,
+                            ./images/olha-mob_900.jpg 2x"
+                            type="image/jpg"
+                            >
                             <img class="team-img"
                              src="./images/olha-mob_450.jpg"
                              alt="Frontend Developer">
@@ -420,13 +450,39 @@
                         </li>  
                         <li class="item">
                             <picture>
-                                <source media="(min-width:1200px )" srcset="./images/mykola-desktop_270.jpg 1x,
-                                ./images/mykola-desktop_540.jpg 2x">
-                                <source media="(min-width:768px )" srcset="./images/mykola-tablet_354.jpg 1x,
-                                 ./images/mykola-tablet_708.jpg 2x">
-                                <source media="(min-width:480px )" srcset="./images/mykola-mob_450.jpg 1x,
-                                 ./images/mykola-mob_900.jpg 2x">
-                            <img class="team-img"
+                                <source media="(min-width:1200px)" srcset="
+                                ./images/mykola-desktop_270.webp 1x,
+                                ./images/mykola-desktop_540.webp 2x"
+                                type="image/webp"
+                                >
+                                <source media="(min-width:1200px)" srcset="
+                                ./images/mykola-desktop_270.jpg 1x,
+                                ./images/mykola-desktop_540.jpg 2x"
+                                type="image/jpg"
+                                >
+
+                                <source media="(min-width:768px)" srcset="
+                                ./images/mykola-tablet_354.webp 1x,
+                                ./images/mykola-tablet_708.webp 2x"
+                                 type="image/webp"
+                                >
+                                <source media="(min-width:768px )" srcset="
+                                ./images/mykola-tablet_354.jpg 1x,
+                                ./images/mykola-tablet_708.jpg 2x"
+                                 type="image/jpg"
+                                 >
+                                
+                                <source media="(min-width:480px)" srcset="
+                                ./images/mykola-mob_450.webp 1x,
+                                ./images/mykola-mob_900.webp 2x" 
+                                type="image/webp"
+                                >
+                                <source media="(min-width:480px)" srcset="
+                                ./images/mykola-mob_450.jpg 1x,
+                                ./images/mykola-mob_900.jpg 2x"
+                                type="image.jpg"
+                                >
+                                <img class="team-img"
                             src="./images/mykola-mob_450.jpg"
                             alt="Marketing" 
                             >
@@ -479,13 +535,39 @@
                         </li>   
                         <li class="item">
                             <picture>
-                                <source media="(min-width:1200px)" srcset="./images/mykhaylo-desktop_270.jpg 1x,
-                                ./images/mykhaylo-desktop_540.jpg 2x">
-                                <source media="(min-width:768px )" srcset="./images/mykhaylo-tablet_354.jpg 1x,
-                                /images/mykhaylo-tablet_708.jpg 2x">
-                                <source media="(min-width:480px)" srcset="./images/mykhaylo-mob_450.jpg 1x,
-                                ./images/mykhaylo-mob_900.jpg 2x">
-                            <img class="team-img"
+                                <source media="(min-width: 1200px)" srcset="
+                                ./images/mykhaylo-desktop_270.webp1x,
+                                ./images/mykhaylo-desktop_540.webp 2x" 
+                                type="image/webp"
+                                >
+                                <source media="(min-width:1200px)" srcset="
+                                ./images/mykhaylo-desktop_270.jpg 1x,
+                                ./images/mykhaylo-desktop_540.jpg 2x"
+                                type="image/jpg"
+                                >
+                                
+                                <source media="(min-width: 768px)" srcset="
+                                ./images/mykhaylo-tablet_354.webp 1x,
+                                ./images/mykhaylo-tablet_708.webp2x" 
+                                type="image/webp"
+                                >
+                                <source media="(min-width:768px )" srcset="
+                                ./images/mykhaylo-tablet_354.jpg 1x,
+                                /images/mykhaylo-tablet_708.jpg 2x"
+                                type="image/jpg"
+                                >
+                               
+                                <source media="(min-width: 768px)" srcset="
+                                ./images/mykhaylo-mob_450.webp 1x,
+                                ./images/mykhaylo-mob_900.webp 2x"
+                                type="image/webp"
+                                >
+                                <source media="(min-width:480px)" srcset="
+                                ./images/mykhaylo-mob_450.jpg 1x,
+                                ./images/mykhaylo-mob_900.jpg 2x"
+                                type="image/jpg"
+                                >
+                                <img class="team-img"
                             src="./images/mykhaylo-mob_450.jpg"
                              alt="UI Designer"
                             >
