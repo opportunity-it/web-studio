@@ -243,32 +243,64 @@
                     <ul class="list work">
                         <li class="item">
                             <div class="position-item">
-                            <img class="image-work" 
-                              srcset="./images/desktop-dodatky-desktop_370.jpg 1x, ./images/desktop-dodatky-desktop_370.jpg 2x"      
-                            src="./images/desktop-dodatky-desktop_370.jpg " 
-                            alt="робота з комп'ютером" 
-                            width="370" height="294">
+                            <picture>
+                                <source media="(min-width:1200px)" srcset="
+                                ./images/desktop-dodatky-desktop_370.webp 1x,
+                                ./images/desktop-dodatky-desktop_740.webp 2x" 
+                                type="image/webp"
+                                >
+                                <source media="(min-width:1200px)" srcset="
+                                ./images/desktop-dodatky-desktop_370.jpg 1x,
+                                ./images/desktop-dodatky-desktop_740.jpg 2x"
+                                type="image/jpg"
+                                >
+                                <img class="image-work" 
+                                src="./images/desktop-dodatky-desktop_370.jpg " 
+                                alt="робота з комп'ютером" 
+                                >
+                            </picture>
                     <p class="position-text">Десктопні додатки</p>
                         </div>
                         </li>
                         <li class="item">
                             <div class="position-item">
-                            <img class="image-work"
-                            srcset="./images/mobile-dodatky-desktop_370.jpg 1x, ./images/mobile-dodatky-desktop_740.jpg 2x"
-                             src="./images/mobile-dodatky-desktop_370.jpg"
-                              alt="робота з телефоном"
-                               width="370" height="294" >
-                    <p class="position-text">Мобільні додатки</p>
+                                <picture>
+                                <source media="(min-width:1200px)" srcset="
+                                ./images/mobile-dodatky-desktop_370.webp 1x,
+                                ./images/mobile-dodatky-desktop_740.webp 2x" 
+                                type="image/webp"
+                                >
+                                <source media="(min-width:1200px)" srcset="
+                                ./images/mobile-dodatky-desktop_370.jpg 1x,
+                                ./images/mobile-dodatky-desktop_740.jpg 2x"
+                                type="image/jpg"
+                                >
+                                <img class="image-work"
+                                src="./images/mobile-dodatky-desktop_370.jpg"
+                                 alt="робота з телефоном"
+                                >
+                                </picture>
+                            <p class="position-text">Мобільні додатки</p>
                         </div>
                         </li>
                         <li class="item">
                             <div class="position-item">
-                            <img class="image-work" 
-                            srcset="./images/design-rishennya-desktop_370.jpg 1x, ./images/design-rishennya-desktop_740.jpg 2x"
-                            src="./images/design-rishennya-desktop_370.jpg"
-                             alt="робота з планшетом"
-                              width="370" height="294"
-                              >
+                                <picture>
+                                    <source media="(min-width:1200px)" srcset="
+                                    ./images/design-rishennya-desktop_370.webp 1x,
+                                    ./images/design-rishennya-desktop_740.webp 2x" 
+                                    type="image/webp"
+                                    >
+                                    <source media="(min-width:1200px)" srcset="
+                                    ./images/design-rishennya-desktop_370.jpg 1x,
+                                    ./images/design-rishennya-desktop_740.jpg 2x"
+                                    type="image/jpg"
+                                    >
+                                    <img class="image-work"
+                                    srcset="./images/design-rishennya-desktop_370.jpg 1x, ./images/design-rishennya-desktop_740.jpg 2x"
+                                    src="./images/design-rishennya-desktop_370.jpg" alt="робота з планшетом" width="370" height="294">
+                                </picture>
+                           
                              <p class="position-text">Дизайнерські рішення</p>
                         </div>
                         </li>
@@ -285,7 +317,9 @@
                             <!-- desktop -->
                             <source media="(min-width: 1200px)" srcset="
                             ./images/ihor-desktop@1x.webp 1x,
-                            ./images/ihor-desktop@2x.webp 2x" type="image/webp">
+                            ./images/ihor-desktop@2x.webp 2x" 
+                            type="image/webp"
+                            >
                             <source media="(min-width: 1200px)" srcset="
                             ./images/ihor-desktop@1x.jpg 1x,
                             ./images/ihor-desktop@2x.jpg 2x"
@@ -536,7 +570,7 @@
                         <li class="item">
                             <picture>
                                 <source media="(min-width: 1200px)" srcset="
-                                ./images/mykhaylo-desktop_270.webp1x,
+                                ./images/mykhaylo-desktop_270.webp 1x,
                                 ./images/mykhaylo-desktop_540.webp 2x" 
                                 type="image/webp"
                                 >
