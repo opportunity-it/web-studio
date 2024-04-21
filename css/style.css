@@ -1431,6 +1431,7 @@ img {
 
 .text-soc-link {
   margin-bottom: 20px;
+  display: block;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.17;
@@ -1486,13 +1487,16 @@ img {
 }
 
 .form-text {
+  margin-bottom: 20px;
+  display: block;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.03em;
+
   text-transform: uppercase;
+
   color: #ffffff;
-  margin-bottom: 20px;
 }
 
 @media screen and (min-width: 1200px) {
