@@ -708,6 +708,11 @@ img {
   }
 }
 
+.form-title {
+  display: block;
+  margin-bottom: 12px;
+}
+
 .form-modal {
   width: auto;
   margin-left: auto;
