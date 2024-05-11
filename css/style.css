@@ -1568,6 +1568,12 @@ img {
   color: rgba(255, 255, 255, 0.6);
   background-color: var(--footer-background-color);
   outline: transparent;
+
+  transition: border 250ms linear;
+}
+
+.form-input:focus {
+  border: 1px solid var(--accent-color);
 }
 
 @media screen and (min-width: 1200px) {
