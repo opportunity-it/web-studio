@@ -19,7 +19,6 @@
   --first-logo-color: rgba(0, 0, 0, 1);
   --main-color-text: #212121;
   --second-color-text: #757575;
-  /* --white-color-text: #FFFFFF; */
   --font-family: Roboto, sans-serif;
   --footer-main-color-text: rgba(255, 255, 255, 0.6);
   --footer-background-color: #2f303a;
@@ -32,6 +31,10 @@ body {
   font-family: "Roboto", sans-serif;
   color: var(--main-color-text);
   background-color: var(--first-background);
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 /* зняття підкреслення */
@@ -108,11 +111,14 @@ img {
 
 /* Стилізація чорного кольору для логотипу */
 .logo-link {
-  font-family: Raleway, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 24px;
-  line-height: 1.16px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
+
+  display: block;
+
   color: var(--first-logo-color);
 }
 
@@ -125,19 +131,16 @@ img {
   }
 }
 
-.header-nav {
+.header-container {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
   display: flex;
   align-items: center;
 }
 
-.main-nav {
-  display: flex;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
 @media screen and (min-width: 768px) {
-  .main-nav {
+  .header-container {
     display: flex;
     padding-bottom: 0;
     padding-top: 0;
@@ -145,34 +148,56 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
-  .main-nav {
+  .header-container {
     display: flex;
     align-items: center;
   }
 }
 
-.list.nav {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  .list.nav {
-    display: flex;
-    margin-left: 88px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .list.nav {
-    margin-left: 93px;
-  }
-}
-
 /* розтягнення навігації */
-.item>.nav {
+@media screen and (min-width:768px) {
+  .navigation-list {
+    display: flex;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .navigation-item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.current-item {
+  position: relative;
+}
+
+.nav {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: var(--main-color-text);
+  text-decoration: none;
+
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+
+  transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width:768px) {
+  .nav {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .navigation-item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 /* Стилізація студії-як поточної сторінки */
@@ -192,18 +217,14 @@ img {
   left: 0;
 }
 
-.current-item {
-  position: relative;
+@media screen and (max-width:767px) {
+  .current-studio::after {
+    display: none;
+  }
 }
 
 /* Стилізація:студіі, портфоліо, контактів */
-.nav {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 
 /* Стилізація портфоліо для html */
 .portfolio {
@@ -231,19 +252,7 @@ img {
   margin-right: 0;
 } */
 
-/* .nav .item:not(:last-child){
-  margin-right: 50px;
-} */
-
-.nav .item+.item {
-  margin-left: 50px;
-}
-
 /* стилізація конверту і мейлу */
-.list.auth {
-  display: none;
-}
-
 @media screen and (min-width: 768px) {
   .list.auth {
     display: flex;
@@ -257,45 +266,53 @@ img {
   }
 }
 
-.icon {
+.authentication-item {
   display: flex;
   align-items: baseline;
 }
 
-.mail {
-  color: var(--second-color-text);
+.icon-envelope {
+  display: none;
+
+  fill: currentColor;
+  vertical-align: middle;
 }
 
-.icon-envelope {
-  margin-right: 10px;
-  fill: currentColor;
-  cursor: pointer;
-  vertical-align: middle;
+@media screen and (min-width:768px) {
+  .icon-envelope {
+    margin-right: 8px;
+
+    display: block;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .icon-envelope {
+    margin-right: 10px;
+
     width: 16px;
     height: 12px;
   }
 }
 
-.mail.nav {
-  align-items: center;
-  display: flex;
+.nav.mail {
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.48px;
+
+  color: var(--second-color-text);
 }
 
 @media screen and (min-width: 768px) {
-  .mail.nav {
+  .nav.mail {
     padding-top: 21px;
     padding-bottom: 10px;
     font-size: 12px;
-    line-height: 1.16;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .mail.nav {
+  .nav.mail {
     font-size: 14px;
     line-height: 1.14;
     padding-top: 32px;
@@ -309,23 +326,9 @@ img {
   color: var(--accent-color);
 }
 
-/* Сірий колір для телефону */
 
-.icon-smartphone {
-  margin-right: 10px;
-  fill: currentColor;
-  cursor: pointer;
-  vertical-align: middle;
-}
 
-@media screen and (min-width: 1200px) {
-  .icon-smartphone {
-    width: 10px;
-    height: 16px;
-  }
-}
-
-.menu-container {
+/* .menu-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -341,65 +344,99 @@ img {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
     0px 1px 3px rgba(0, 0, 0, 0.16);
   z-index: 9;
+} */
+
+.menu-container {
+  outline: 1px solid red;
+  padding: 48px 40px;
+
+  background-color: #b7c3c3;
+}
+
+@media screen and (max-width:767px) {
+  .menu-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 796px;
+
+    display: none;
+
+  }
+}
+
+@media screen and (min-width:768px) {
+  .menu-container {
+    padding: 0;
+  }
 }
 
 .menu-container.is-open {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* .menu-container.is-open {
   transform: translateX(0);
-}
+} */
 
-.mobile-menu {
+
+
+/* .mobile-menu {
   margin-bottom: auto;
-}
+} */
 
-.mobile-menu-item:not(:last-child) {
+/* .mobile-menu-item:not(:last-child) {
   margin-bottom: 32px;
-}
+} */
 
-.mobile-menu-link {
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 1;
-  letter-spacing: 0.02em;
-  color: var(--main-color-text);
-  text-decoration: none;
-}
+/* .mobile-menu-link {
 
-.mobile-menu-link:hover,
+} */
+
+/* .mobile-menu-link:hover,
 .mobile-menu-link:focus {
   color: var(--accent-color);
-}
+} */
 
-.mobile-contacts-item {
+/* .mobile-contacts-item {
   margin-bottom: 32px;
-}
+} */
 
-.mobile-contacts-tel {
+/* .mobile-contacts-tel {
   font-weight: 500;
   font-size: 34px;
   line-height: 1.17;
   color: var(--main-color-text);
   letter-spacing: 0.02em;
-}
+} */
 
-.mobile-contacts-tel:hover,
+/* .mobile-contacts-tel:hover,
 .mobile-contacts-tel:focus {
   color: var(--accent-color);
-}
+} */
 
-.mob-contacts-item {
+/* .mob-contacts-item {
   margin-bottom: 64px;
-}
+} */
 
-.mobile-contacts-mail {
+/* .mobile-contacts-mail {
   font-size: 24px;
   line-height: 1.16;
   letter-spacing: 0.02em;
   color: var(--second-color-text);
-}
+} */
 
 .mobile-social {
   display: flex;
-  margin-bottom: 48px;
+}
+
+@media screen and (min-width:768px) {
+  .mobile-social {
+    display: none;
+  }
 }
 
 .mobile-social-link {
@@ -421,16 +458,17 @@ img {
   margin: 10px;
 }
 
-.tel {
+.nav.smartphone {
+  font-size: 34px;
+
+  display: flex;
+
   color: var(--second-color-text);
 }
 
-.tel.nav {
-  display: flex;
-}
 
 @media screen and (min-width: 768px) {
-  .tel.nav {
+  .nav.smartphone {
     font-size: 12px;
     line-height: 1.16;
     padding-top: 0;
@@ -439,7 +477,7 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
-  .tel.nav {
+  .nav.smartphone {
     margin-left: 40px;
     font-size: 14px;
     padding-top: 32px;
@@ -448,27 +486,53 @@ img {
 }
 
 /* Стилізація телефону-ефект ховеру і фокусу */
-.tel:hover,
-.tel:focus {
+.nav.smartphone:hover,
+.nav.smartphone:focus {
   color: var(--accent-color);
 }
 
-.auth {
-  margin-top: 0;
-  display: flex;
-  margin-bottom: 0;
-  margin-left: auto;
+/* Сірий колір для телефону */
+
+.icon-smartphone {
+  margin-right: 10px;
+  fill: currentColor;
+  vertical-align: middle;
+  display: none;
 }
 
-/* .auth .item + .item {
-  margin-left: 50px;
-} */
+@media screen and (min-width:768px) {
+  .icon-smartphone {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .icon-smartphone {
+    width: 10px;
+    height: 16px;
+  }
+}
+
+.authentication-list {
+  margin-top: auto;
+  margin-bottom: 64px;
+}
+
+@media screen and (max-width:767px) {
+  .authentication-item+.authentication-item {
+    margin-top: 32px;
+  }
+}
+
 .menu-button {
+  padding: 0;
   margin-left: auto;
+
+  display: inline-flex;
+
   background-color: transparent;
   border: none;
-  padding: 0;
-  height: 40px;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -477,9 +541,13 @@ img {
   }
 }
 
-.menu-button:hover,
-.menu-button:focus {
-  color: var(--accent-color);
+.menu-button .open-mobile {
+  transition: fill 250ms linear;
+}
+
+.menu-button .open-mobile:hover,
+.menu-button .open-mobile:focus {
+  fill: var(--accent-color);
 }
 
 .menu-toggle {
@@ -493,15 +561,19 @@ img {
   margin-left: auto;
 }
 
+.menu-toggle .close-mobile {
+  transition: fill 250ms linear;
+}
+
 .menu-toggle:hover,
 .menu-toggle:focus {
   fill: var(--accent-color);
 }
 
-.burger-open:hover,
+/* .burger-open:hover,
 .burger-open:focus {
   fill: var(--accent-color);
-}
+} */
 
 @media screen and (min-width: 768px) {
   .menu-toggle {
@@ -621,12 +693,18 @@ img {
   position: fixed;
   top: 0;
   left: 0;
+
+  padding: 93px 15px;
+
   width: 100%;
   height: 100%;
+
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 1;
   opacity: 1;
   backdrop-filter: blur(5px);
+
+  overflow-y: scroll;
 
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -638,24 +716,47 @@ img {
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(1.3);
+  transform: scale(1.3);
+  /* transform: translate(-50%, -50%) scale(1.3); */
+}
+
+@media screen and (min-width:768px) {
+  .backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(1.3);
+  }
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  max-width: 450px;
-  transform: translate(-50%, -50%) scale(1);
+  /* position: absolute; */
+  position: relative;
+  /* top: 50%; */
+  /* left: 50%;  */
+  /* max-width: 450px; */
+  width: 100%;
+  /* transform: translate(-50%, -50%) scale(1); */
   padding: 40px;
   background-color: #fff;
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (min-width:768px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    max-width: 450px;
+    min-height: 609px;
+
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .modal {
     max-width: 528px;
+    max-height: 581px;
   }
 }
 
