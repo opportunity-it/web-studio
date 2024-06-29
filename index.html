@@ -55,7 +55,7 @@
               +38 096 111 11 11</a>
           </li>
           <li class="authentication-item">
-            <a href="mailto:info@devstudio.com" class="underline auth mail ">
+            <a href="mailto:info@devstudio.com" class="underline auth mail">
               <svg class="icon-envelope" width="14" height="10">
                 <use href="./images/sprite.svg#icon-envelope"></use>
               </svg>
@@ -113,13 +113,10 @@
     </div>
   </header>
   <main>
-    <section class="hero">
+    <section class="hero centered">
       <div class="container">
         <!-- Герой -->
-        <h1 class="hero-title">
-          Ефективні рішення для
-          вашого бізнесу
-        </h1>
+        <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
         <button data-modal-open type="button" class="hero-button">Замовити послугу</button>
         <div class="backdrop is-hidden" data-modal>
           <div class="modal">
@@ -186,7 +183,7 @@
                 <use href="./images/sprite.svg#icon-antenna"></use>
               </svg>
             </div>
-            <h3 class="features-title">УВАГА ДО ДЕТАЛЕЙ</h3>
+            <h3 class="features-title centered">УВАГА ДО ДЕТАЛЕЙ</h3>
             <p class="features-text">
               Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.
             </p>
@@ -197,7 +194,7 @@
                 <use href="./images/sprite.svg#icon-clock"></use>
               </svg>
             </div>
-            <h3 class="features-title">ПУНКТУАЛЬНІСТЬ</h3>
+            <h3 class="features-title centered">ПУНКТУАЛЬНІСТЬ</h3>
             <p class="features-text">
               Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.
             </p>
@@ -208,7 +205,7 @@
                 <use href="./images/sprite.svg#icon-diagram"></use>
               </svg>
             </div>
-            <h3 class="features-title">ПЛАНУВАННЯ</h3>
+            <h3 class="features-title centered">ПЛАНУВАННЯ</h3>
             <p class="features-text">
               Так само консультація з широким активом значною мірою зумовлює.
             </p>
@@ -219,7 +216,7 @@
                 <use href="./images/sprite.svg#icon-astronaut"></use>
               </svg>
             </div>
-            <h3 class="features-title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+            <h3 class="features-title centered">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
             <p class="features-text">
               Значимість цих проблем настільки очевидна, що реалізація планових завдань.
             </p>
@@ -230,9 +227,9 @@
     <!-- Робота    -->
     <section class="work">
       <div class="container">
-        <h2 class="work-title">Чим ми займаємося</h2>
-        <ul class="list work">
-          <li class="item">
+        <h2 class="work-title centered">Чим ми займаємося</h2>
+        <ul class="list work-list">
+          <li class="work-item">
             <div class="position-item">
               <picture>
                 <source media="(min-width:1200px)" srcset="
@@ -248,7 +245,7 @@
               <p class="position-text">Десктопні додатки</p>
             </div>
           </li>
-          <li class="item">
+          <li class="work-item">
             <div class="position-item">
               <picture>
                 <source media="(min-width:1200px)" srcset="
@@ -264,7 +261,7 @@
               <p class="position-text">Мобільні додатки</p>
             </div>
           </li>
-          <li class="item">
+          <li class="work-item">
             <div class="position-item">
               <picture>
                 <source media="(min-width:1200px)" srcset="
@@ -291,9 +288,9 @@
     <!-- Команда -->
     <section class="team">
       <div class="container">
-        <h2 class="team-title">Наша команда</h2>
-        <ul class="list team">
-          <li class="item">
+        <h2 class="team-title centered">Наша команда</h2>
+        <ul class="list team-list">
+          <li class="team-item">
             <picture>
               <!-- desktop -->
               <source media="(min-width: 1200px)"
@@ -306,9 +303,9 @@
               <source media="(min-width: 768px)"
                 srcset="./images/ihor-tablet_354.jpg 1x, ./images/ihor-tablet_708.jpg 2x" type="image/jpg" />
               <!-- mobile -->
-              <source media="(min-width: 480px)" srcset="./images/ihor-mob_450.webp 1x, ./images/ihor-mob_900.webp 2x"
+              <source media="(max-width: 767px)" srcset="./images/ihor-mob_450.webp 1x, ./images/ihor-mob_900.webp 2x"
                 type="image/webp" />
-              <source media="(min-width: 480px)" srcset="./images/ihor-mob_450.jpg 1x, ./images/ihor-mob_900.jpg 2x"
+              <source media="(max-width: 767px)" srcset="./images/ihor-mob_450.jpg 1x, ./images/ihor-mob_900.jpg 2x"
                 type="image/jpg" />
 
               <img class="team-img" src="./images/ihor-mob_450.jpg" alt="Product Designer" />
@@ -327,9 +324,9 @@
                         src="./images/ihor-mob_450.jpg"
                          alt="Product Designer"
                           width="450" height="460"> -->
-            <h3 class="team-title-name">Ігор Дем'яненко</h3>
-            <p class="team-text">Product Designer</p>
-            <ul class="social-icons list">
+            <h3 class="team-title-name centered">Ігор Дем'яненко</h3>
+            <p class="team-text centered">Product Designer</p>
+            <ul class="list social-icons">
               <li class="social-item">
                 <a class="social-link" href="" aria-label="Посилання на інстаграм" target="_blank"
                   rel="noopener nofollow noreferrer">
@@ -364,8 +361,7 @@
               </li>
             </ul>
           </li>
-
-          <li class="item">
+          <li class="team-item">
             <picture>
               <source media="(min-width: 1200px)"
                 srcset="./images/olha-desktop_270.webp 1x, ./images/olha-desktop_540.webp 2x" type="image/webp" />
@@ -377,9 +373,9 @@
               <source media="(min-width: 768px)"
                 srcset="./images/olha-tablet_354.jpg 1x, ./images/olha-tablet_708.jpg 2x" type="image/jpg" />
 
-              <source media="(min-width: 480px)" srcset="./images/olha-mob_450.webp 1x, ./images/olha-mob_900.webp 2x"
+              <source media="(max-width: 767px)" srcset="./images/olha-mob_450.webp 1x, ./images/olha-mob_900.webp 2x"
                 type="image/webp" />
-              <source media="(min-width: 480px)" srcset="./images/olha-mob_450.jpg 1x, ./images/olha-mob_900.jpg 2x"
+              <source media="(max-width: 767px)" srcset="./images/olha-mob_450.jpg 1x, ./images/olha-mob_900.jpg 2x"
                 type="image/jpg" />
               <img class="team-img" src="./images/olha-mob_450.jpg" alt="Frontend Developer" />
             </picture>
@@ -396,9 +392,9 @@
                             src="./images/olha-mob_450.jpg"
                              alt="Frontend Developer"
                               width="450" height="460"> -->
-            <h3 class="team-title-name">Ольга Рєпіна</h3>
-            <p class="team-text">Frontend Developer</p>
-            <ul class="social-icons list">
+            <h3 class="team-title-name centered">Ольга Рєпіна</h3>
+            <p class="team-text centered">Frontend Developer</p>
+            <ul class="list social-icons">
               <li class="social-item">
                 <a class="social-link" href="" aria-label="Посилання на інстаграм" target="_blank"
                   rel="nofollow noopener noreferrer">
@@ -433,7 +429,7 @@
               </li>
             </ul>
           </li>
-          <li class="item">
+          <li class="team-item">
             <picture>
               <source media="(min-width:1200px)"
                 srcset="./images/mykola-desktop_270.webp 1x, ./images/mykola-desktop_540.webp 2x" type="image/webp" />
@@ -445,9 +441,9 @@
               <source media="(min-width:768px )"
                 srcset="./images/mykola-tablet_354.jpg 1x, ./images/mykola-tablet_708.jpg 2x" type="image/jpg" />
 
-              <source media="(min-width:480px)"
+              <source media="(max-width:767px)"
                 srcset="./images/mykola-mob_450.webp 1x, ./images/mykola-mob_900.webp 2x" type="image/webp" />
-              <source media="(min-width:480px)" srcset="./images/mykola-mob_450.jpg 1x, ./images/mykola-mob_900.jpg 2x"
+              <source media="(max-width:767px)" srcset="./images/mykola-mob_450.jpg 1x, ./images/mykola-mob_900.jpg 2x"
                 type="image/jpg" />
               <img class="team-img" src="./images/mykola-mob_450.jpg" alt="Marketing" />
             </picture>
@@ -463,9 +459,9 @@
                             src="./images/mykola-mob_450.jpg"
                             alt="Marketing" 
                              width="450" height="460"> -->
-            <h3 class="team-title-name">Микола Тарасов</h3>
-            <p class="team-text">Marketing</p>
-            <ul class="social-icons list">
+            <h3 class="team-title-name centered">Микола Тарасов</h3>
+            <p class="team-text centered">Marketing</p>
+            <ul class="list social-icons">
               <li class="social-item">
                 <a class="social-link" href="" aria-label="Посилання на інстаграм" target="_blank"
                   rel="noopener nofollow noreferrer">
@@ -500,7 +496,7 @@
               </li>
             </ul>
           </li>
-          <li class="item">
+          <li class="team-item">
             <picture>
               <source media="(min-width: 1200px)" srcset="
                     ./images/mykhaylo-desktop_270.webp 1x,
@@ -518,9 +514,9 @@
               <source media="(min-width:768px )"
                 srcset="./images/mykhaylo-tablet_354.jpg 1x, /images/mykhaylo-tablet_708.jpg 2x" type="image/jpg" />
 
-              <source media="(min-width: 768px)"
+              <source media="(max-width: 767px)"
                 srcset="./images/mykhaylo-mob_450.webp 1x, ./images/mykhaylo-mob_900.webp 2x" type="image/webp" />
-              <source media="(min-width:480px)"
+              <source media="(max-width:767px)"
                 srcset="./images/mykhaylo-mob_450.jpg 1x, ./images/mykhaylo-mob_900.jpg 2x" type="image/jpg" />
               <img class="team-img" src="./images/mykhaylo-mob_450.jpg" alt="UI Designer" />
             </picture>
@@ -538,9 +534,9 @@
                              src="./images/mykhaylo-mob_450.jpg"
                              alt="UI Designer"
                               width="450" height="460"> -->
-            <h3 class="team-title-name">Михайло Єрмаков</h3>
-            <p class="team-text">UI Designer</p>
-            <ul class="social-icons list">
+            <h3 class="team-title-name centered">Михайло Єрмаков</h3>
+            <p class="team-text centered">UI Designer</p>
+            <ul class="list social-icons">
               <li class="social-item">
                 <a class="social-link" href="" aria-label="Посилання на інстаграм" target="_blank"
                   rel="noopener nofollow noreferrer">
@@ -580,7 +576,7 @@
     </section>
     <section class="clients">
       <div class="container">
-        <h2 class="clients-title">Постійні клієнти</h2>
+        <h2 class="clients-title centered">Постійні клієнти</h2>
         <ul class="clients-list list">
           <li class="clients-item">
             <a class="clients-link" href="" aria-label="Посилання на Ya-Co" target="_blank"
@@ -635,7 +631,7 @@
     </section>
   </main>
   <!-- Підлога -->
-  <footer class="main-footer">
+  <footer class="main-footer centered">
     <div class="container footer">
       <div class="logo-wrapper">
         <div class="logo-footer">
