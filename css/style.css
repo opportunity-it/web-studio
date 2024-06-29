@@ -122,12 +122,20 @@ img {
   color: var(--first-logo-color);
 }
 
+@media screen and (min-width:768px) {
+  .logo-link {
+    margin-right: 88px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .logo-link {
-    font-size: 26px;
-    line-height: 1.19;
+    margin-right: 93px;
     padding-bottom: 25px;
     padding-top: 24px;
+
+    font-size: 26px;
+    line-height: 1.19;
   }
 }
 
@@ -154,6 +162,111 @@ img {
   }
 }
 
+/* MOBILE MENU */
+
+.menu-button {
+  padding: 0;
+  margin-left: auto;
+
+  display: inline-flex;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}
+
+.menu-button .open-mobile {
+  transition: fill 250ms linear;
+}
+
+.menu-button .open-mobile:hover,
+.menu-button .open-mobile:focus {
+  fill: var(--accent-color);
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.menu-toggle .close-mobile {
+  transition: fill 250ms linear;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  fill: var(--accent-color);
+}
+
+/* .burger-open:hover,
+.burger-open:focus {
+  fill: var(--accent-color);
+} */
+
+@media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .menu-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 796px;
+
+    padding: 48px 40px;
+
+
+    background-color: var(--first-background);
+
+    transform: translateX(100%);
+    display: none;
+
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 1px 3px rgba(0, 0, 0, 0.16);
+
+    /* transition: transform 500ms linear, visibility 500ms linear, opacity 500ms linear; */
+
+    /* visibility: hidden; */
+    /* opacity: 0; */
+  }
+}
+
+@media screen and (min-width:768px) {
+  .menu-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+}
+
+.menu-container.is-open {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transform: translateX(0);
+
+  /* opacity: 1; */
+  /* visibility: initial; */
+
+}
+
 /* розтягнення навігації */
 @media screen and (min-width:768px) {
   .navigation-list {
@@ -174,7 +287,7 @@ img {
 .nav {
   font-weight: 500;
   font-size: 40px;
-  line-height: 1;
+  line-height: 1.18;
   letter-spacing: 0.02em;
   color: var(--main-color-text);
   text-decoration: none;
@@ -191,8 +304,10 @@ img {
 
     font-size: 14px;
     line-height: 1.14;
+    letter-spacing: 0.28px;
   }
 }
+
 
 @media screen and (min-width:768px) {
   .navigation-item:not(:last-child) {
@@ -252,30 +367,148 @@ img {
   margin-right: 0;
 } */
 
+
 /* стилізація конверту і мейлу */
-@media screen and (min-width: 768px) {
-  .list.auth {
+@media screen and (max-width:767px) {
+  .authentication-list {
+    margin-top: auto;
+    margin-bottom: 64px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .authentication-list {
+    margin-left: auto;
+
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .authentication-list {
+    flex-direction: row-reverse;
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .authentication-item+.authentication-item {
+    margin-top: 32px;
+  }
+}
+
+.auth {
+  font-weight: 500;
+  line-height: 1.16;
+
+  color: var(--second-color-text);
+}
+
+@media screen and (min-width:768px) {
+  .auth {
+    font-size: 12px;
+    letter-spacing: 0.24px;
+  }
+}
+
+.auth.smartphone {
+  font-size: 34px;
+  letter-spacing: 0.68px;
+
+  color: #2196F3;
+}
+
+@media screen and (min-width: 768px) {
+  .auth.smartphone {
+    font-size: 12px;
+    letter-spacing: 0.24px;
+
+    display: flex;
+
+    color: var(--second-color-text);
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .list.auth {
-    flex-direction: revert;
+  .auth.smartphone {
+    margin-left: 40px;
+    font-size: 14px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 
-.authentication-item {
-  display: flex;
-  align-items: baseline;
+/* Стилізація телефону-ефект ховеру і фокусу */
+.smartphone:hover,
+.smartphone:focus {
+  color: var(--accent-color);
 }
 
+
+/* іконка  телефону  */
+.icon-smartphone {
+  display: none;
+
+  fill: currentColor;
+}
+
+@media screen and (min-width:768px) {
+  .icon-smartphone {
+    margin-right: 8px;
+
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .icon-smartphone {
+    margin-right: 10px;
+
+    width: 10px;
+    height: 16px;
+  }
+}
+
+/* стилізація мейла  */
+.auth.mail {
+  font-size: 24px;
+  letter-spacing: 0.48px;
+}
+
+@media screen and (min-width: 768px) {
+  .auth.mail {
+    font-size: 12px;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .auth.mail {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.28px;
+  }
+}
+
+/* налаштування фокусу і ховеру для мейл */
+.mail:hover,
+.mail:focus {
+  color: var(--accent-color);
+}
+
+/* іконка конверту  */
 .icon-envelope {
   display: none;
 
   fill: currentColor;
-  vertical-align: middle;
 }
 
 @media screen and (min-width:768px) {
@@ -295,92 +528,11 @@ img {
   }
 }
 
-.nav.mail {
-  font-size: 24px;
-  line-height: 1.16;
-  letter-spacing: 0.48px;
-
-  color: var(--second-color-text);
-}
-
-@media screen and (min-width: 768px) {
-  .nav.mail {
-    padding-top: 21px;
-    padding-bottom: 10px;
-    font-size: 12px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .nav.mail {
-    font-size: 14px;
-    line-height: 1.14;
-    padding-top: 32px;
-    padding-bottom: 32px;
-  }
-}
-
-/* налаштування фокусу і ховеру для мейл */
-.mail:hover,
-.mail:focus {
-  color: var(--accent-color);
-}
 
 
 
-/* .menu-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-  height: 100vh;
-  padding-left: 40px;
-  padding-top: 48px;
-  background-color: var(--first-background);
-  transform: translateX(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
-    0px 1px 3px rgba(0, 0, 0, 0.16);
-  z-index: 9;
-} */
 
-.menu-container {
-  outline: 1px solid red;
-  padding: 48px 40px;
 
-  background-color: #b7c3c3;
-}
-
-@media screen and (max-width:767px) {
-  .menu-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 796px;
-
-    display: none;
-
-  }
-}
-
-@media screen and (min-width:768px) {
-  .menu-container {
-    padding: 0;
-  }
-}
-
-.menu-container.is-open {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/* .menu-container.is-open {
-  transform: translateX(0);
-} */
 
 
 
@@ -429,6 +581,7 @@ img {
   color: var(--second-color-text);
 } */
 
+/* стилізація соціальних мереж мобільного меню  */
 .mobile-social {
   display: flex;
 }
@@ -458,128 +611,10 @@ img {
   margin: 10px;
 }
 
-.nav.smartphone {
-  font-size: 34px;
-
-  display: flex;
-
-  color: var(--second-color-text);
-}
 
 
-@media screen and (min-width: 768px) {
-  .nav.smartphone {
-    font-size: 12px;
-    line-height: 1.16;
-    padding-top: 0;
-    padding-bottom: 21px;
-  }
-}
 
-@media screen and (min-width: 1200px) {
-  .nav.smartphone {
-    margin-left: 40px;
-    font-size: 14px;
-    padding-top: 32px;
-    padding-bottom: 32px;
-  }
-}
 
-/* Стилізація телефону-ефект ховеру і фокусу */
-.nav.smartphone:hover,
-.nav.smartphone:focus {
-  color: var(--accent-color);
-}
-
-/* Сірий колір для телефону */
-
-.icon-smartphone {
-  margin-right: 10px;
-  fill: currentColor;
-  vertical-align: middle;
-  display: none;
-}
-
-@media screen and (min-width:768px) {
-  .icon-smartphone {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .icon-smartphone {
-    width: 10px;
-    height: 16px;
-  }
-}
-
-.authentication-list {
-  margin-top: auto;
-  margin-bottom: 64px;
-}
-
-@media screen and (max-width:767px) {
-  .authentication-item+.authentication-item {
-    margin-top: 32px;
-  }
-}
-
-.menu-button {
-  padding: 0;
-  margin-left: auto;
-
-  display: inline-flex;
-
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-@media screen and (min-width: 768px) {
-  .menu-button {
-    display: none;
-  }
-}
-
-.menu-button .open-mobile {
-  transition: fill 250ms linear;
-}
-
-.menu-button .open-mobile:hover,
-.menu-button .open-mobile:focus {
-  fill: var(--accent-color);
-}
-
-.menu-toggle {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  padding: 0;
-  border: 0;
-  background-color: transparent;
-  cursor: pointer;
-  margin-left: auto;
-}
-
-.menu-toggle .close-mobile {
-  transition: fill 250ms linear;
-}
-
-.menu-toggle:hover,
-.menu-toggle:focus {
-  fill: var(--accent-color);
-}
-
-/* .burger-open:hover,
-.burger-open:focus {
-  fill: var(--accent-color);
-} */
-
-@media screen and (min-width: 768px) {
-  .menu-toggle {
-    display: none;
-  }
-}
 
 /* Стилізація  фону "героя" */
 .hero {
@@ -652,6 +687,12 @@ img {
 
 /* стилізація тексту героя */
 .hero-title {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
+
+  max-width: 360px;
+
   font-weight: 900;
   font-size: 26px;
   line-height: 1.62;
@@ -659,7 +700,6 @@ img {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--first-background);
-  margin-bottom: 30px;
 }
 
 /* екран компютера */
@@ -667,6 +707,9 @@ img {
   .hero-title {
     font-size: 44px;
     line-height: 1.36;
+    letter-spacing: 2.64px;
+
+    max-width: 696px;
   }
 }
 
@@ -679,7 +722,7 @@ img {
   color: var(--first-background);
   background-color: var(--accent-color);
   cursor: pointer;
-  min-width: 216px;
+  min-width: 200px;
   padding: 10px 24px;
   border-radius: 4px;
 
@@ -959,26 +1002,28 @@ img {
   border: transparent;
 }
 
+/* СЕКЦІЯ ОСОБЛИВОСТІ  */
 @media screen and (min-width: 1200px) {
-  .features {
+  .section-features {
     padding-bottom: 94px;
   }
 }
 
 .features-list {
-  display: flex;
+  outline: 1px solid red;
+}
 
-  width: 450px;
-  flex-direction: column;
+@media screen and (max-width:767px) {
+  .features-list {
+    max-width: 450px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .features-list {
-    margin-left: 0;
+    display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    width: auto;
-    flex-direction: row;
   }
 }
 
@@ -988,25 +1033,26 @@ img {
   }
 }
 
-.features-list .item {
-  flex-basis: calc((100% - 90px) / 4);
-  /* margin-left: 30px; */
+.features-item {
+  outline: 1px solid rgb(0, 21, 255);
 }
 
-.features-list .item:not(:last-child) {
-  margin-bottom: 30px;
-}
-
-@media screen and (min-width: 768px) {
-  .features-list .item {
-    flex-basis: calc((100% - 30px) / 2);
-    margin-left: 0;
+@media screen and (max-width:767px) {
+  .features-item:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .features-list .item:not(:last-child) {
-    margin-bottom: 0;
+  .features-item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
+
+@media screen and (min-width:1200px) {
+  .features-item {
+    flex-basis: calc((100% - 90px) / 4);
   }
 }
 
@@ -1040,21 +1086,9 @@ img {
 /* стилізація тексту, особливості */
 .features-text {
   font-size: 14px;
-  line-height: 1.16;
+  line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--second-color-text);
-  margin-bottom: 30px;
-  margin-top: 0;
-}
-
-.features-text:last-child {
-  margin-bottom: 0;
-}
-
-@media screen and (min-width: 1200px) {
-  .features-text {
-    line-height: 1.71;
-  }
 }
 
 /* стилізація секції "робота" */
@@ -1661,7 +1695,7 @@ img {
   padding-bottom: 15px;
   padding-left: 16px;
   margin-bottom: 20px;
-  width: 450px;
+  max-width: 450px;
 
   /* height: 50px; */
   border-radius: 4px;
