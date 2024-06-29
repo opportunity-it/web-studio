@@ -1184,6 +1184,12 @@ img {
   background-color: var(--first-background);
 }
 
+@media screen and (max-width:767px) {
+  .team-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
 .team-img {
   margin-bottom: 30px;
 }
