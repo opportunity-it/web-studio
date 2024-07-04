@@ -19,7 +19,7 @@
   --first-logo-color: rgba(0, 0, 0, 1);
   --main-color-text: #212121;
   --second-color-text: #757575;
-  --font-family: Roboto, sans-serif;
+  --font-family: "Roboto", sans-serif;
   --footer-main-color-text: rgba(255, 255, 255, 0.6);
   --footer-background-color: #2f303a;
   --backgroud-color-hero: #2f303a;
@@ -96,6 +96,16 @@ img {
   height: auto;
 }
 
+.logo-link {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+
+  display: block;
+}
+
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -107,62 +117,52 @@ img {
   }
 }
 
+.styled {
+  font-style: normal;
+}
+
 /* СТИЛІЗАЦІЯ СТУДІЇ- HTML */
 /* Синій колір для логотипу */
-.span {
+@media screen and (min-width:1200px) {
+  .logo-link {
+    font-size: 26px;
+    letter-spacing: 0.78px;
+    line-height: 1.19;
+  }
+}
+
+.logo-link>.span-logo {
   color: var(--accent-color);
 }
 
 /* Стилізація чорного кольору для логотипу */
-.logo-link {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
-
-  display: block;
-
+.logo-header {
   color: var(--first-logo-color);
 }
 
 @media screen and (min-width:768px) {
-  .logo-link {
+  .logo-header {
     margin-right: 88px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .logo-link {
+  .logo-header {
     margin-right: 93px;
     padding-bottom: 25px;
     padding-top: 24px;
-
-    font-size: 26px;
-    line-height: 1.19;
   }
 }
 
 .header-container {
-  padding-top: 10px;
-  padding-bottom: 10px;
-
   display: flex;
   align-items: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
   .header-container {
-    display: flex;
-    padding-bottom: 0;
-    padding-top: 0;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .header-container {
-    display: flex;
-    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
@@ -930,8 +930,8 @@ img {
 .form-field textarea::placeholder,
 .input-style::placeholder {
   font-size: 14px;
-  line-height: 1.16;
   letter-spacing: 0.01em;
+
   color: rgba(117, 117, 117, 0.5);
 }
 
@@ -1352,7 +1352,7 @@ img {
 }
 
 /* стилізація "веб" чорним кольором */
-.span-footer {
+.logo-footer>.span-footer {
   color: var(--first-background);
 }
 
@@ -1360,44 +1360,48 @@ img {
 .main-footer {
   padding-top: 60px;
   padding-bottom: 60px;
-  margin-right: auto;
-  margin-left: auto;
 
   max-width: 1600px;
 
   background-color: var(--footer-background-color);
 }
 
-@media screen and (min-width: 768px) {
-  .logo-wrapper {
-    margin-bottom: 60px;
+@media screen and (min-width:1200px) {
+  .container-footer {
     display: flex;
     align-items: baseline;
-    gap: 165px;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .logo-wrapper {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .logo-wrapper {
+    margin-bottom: 60px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .logo-wrapper {
-    margin-bottom: 0;
     gap: 94px;
   }
 }
 
-.logo-footer {
-  margin-bottom: 60px;
-}
-
-@media screen and (min-width: 768px) {
-  .logo-footer {
-    margin-bottom: 0;
+@media screen and (max-width: 767px) {
+  .logo-list {
+    margin-bottom: 60px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .logo-footer {
-    margin-left: 0;
-    margin-bottom: 0;
+  .logo-list {
     text-align: start;
   }
 }
@@ -1429,18 +1433,8 @@ img {
   }
 }
 
-.logo-link.footer {
+.logo-footer {
   margin-bottom: 28px;
-  display: block;
-  line-height: 1.17;
-}
-
-@media screen and (min-width: 1200px) {
-  .logo-link.footer {
-    padding-top: 0;
-    padding-bottom: 0;
-    justify-content: flex-start;
-  }
 }
 
 .footer-text {
@@ -1458,26 +1452,6 @@ img {
   color: var(--accent-color);
 }
 
-@media screen and (min-width: 1200px) {
-  .footer-text {
-    line-height: 1.71;
-    margin-top: 3px;
-    margin-bottom: 9px;
-  }
-}
-
-.footer {
-  line-height: 1.16;
-  letter-spacing: 0.03em;
-}
-
-@media screen and (min-width: 768px) {
-  .footer {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-
 /* ефект ховера і фокусу для імейлу */
 .footer-mail {
   color: var(--footer-main-color-text);
@@ -1488,13 +1462,8 @@ img {
   color: var(--accent-color);
 }
 
-.item-tel {
-  line-height: 1.14;
-}
-
 .footer-item:not(:last-child) {
   margin-bottom: 12px;
-  line-height: 1.14;
 }
 
 /* ефект фокусу і ховера для телефону */
@@ -1507,59 +1476,41 @@ img {
   color: var(--accent-color);
 }
 
-.text-social-link {
-  margin-bottom: 60px;
-}
-
-@media screen and (min-width: 768px) {
-  .text-social-link {
-    margin-bottom: 0;
-  }
-}
 
 @media screen and (min-width: 1200px) {
   .text-social-link {
     margin-right: 0;
-    margin-bottom: 0;
+
     text-align: start;
   }
 }
 
 .text-soc-link {
   margin-bottom: 20px;
-  display: block;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
 
+  display: block;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
 
   color: var(--first-background);
 }
 
-@media screen and (min-width: 1200px) {
-  .text-soc-link {
-    justify-content: flex-start;
-  }
-}
-
 .social-icons-footer {
   display: flex;
   justify-content: center;
+  gap: 10px;
 }
 
 .social-item-footer {
   width: 44px;
   height: 44px;
-  margin-right: 10px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 }
 
-.social-item-footer:last-child {
-  margin-right: 0;
-}
 
 .social-link-footer:hover,
 .social-link-footer:focus {
@@ -1582,14 +1533,20 @@ img {
   fill: currentColor;
 }
 
+@media screen and (max-width:1199px) {
+  .form-footer>.text-input {
+    margin-bottom: 20px;
+  }
+}
+
 .form-text {
   margin-bottom: 20px;
+
   display: block;
-  font-weight: 700;
+
   font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.03em;
-
   text-transform: uppercase;
 
   color: #ffffff;
@@ -1602,41 +1559,49 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
-  .button-form-footer {
-    display: flex;
-  }
-}
-
-.form-footer {
-  padding-top: 0;
-}
-
-@media screen and (min-width: 768px) {
   .form-footer {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .form-footer {
-    margin-left: auto;
-    flex-direction: row;
     align-items: end;
   }
 }
 
+.form-input {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+
+  max-width: 450px;
+  width: 100%;
+
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: var(--footer-background-color);
+  outline: transparent;
+
+  transition: border 250ms linear;
+}
+
 @media screen and (min-width: 1200px) {
-  .form-footer.section {
-    padding-bottom: 0;
+  .form-input {
+    margin-right: 12px;
+
+    width: 358px;
   }
+}
+
+.form-input::placeholder {
+  letter-spacing: 0.48px;
+
+  color: rgba(255, 255, 255, 0.60);
+}
+
+.form-input:focus {
+  border-color: var(--accent-color);
 }
 
 .btn-form-footer {
   padding: 10px 28px 10px 31px;
-  margin: 0 auto;
+
   min-width: 200px;
 
   display: flex;
@@ -1644,7 +1609,6 @@ img {
   justify-content: center;
 
   font-weight: 700;
-  font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
 
@@ -1656,40 +1620,10 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (max-width:1199px) {
   .btn-form-footer {
-    margin: 0;
-  }
-}
-
-.form-input {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 16px;
-  margin-bottom: 20px;
-  max-width: 450px;
-
-  /* height: 50px; */
-  border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: rgba(255, 255, 255, 0.6);
-  background-color: var(--footer-background-color);
-  outline: transparent;
-
-  transition: border 250ms linear;
-}
-
-.form-input:focus {
-  border-color: var(--accent-color);
-}
-
-@media screen and (min-width: 1200px) {
-  .form-input {
-    margin-right: 12px;
-    margin-bottom: 0;
-
-    width: 358px;
-    height: auto;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
