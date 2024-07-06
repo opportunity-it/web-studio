@@ -106,23 +106,17 @@ img {
   display: block;
 }
 
-.section {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-@media screen and (min-width: 1200px) {
-  .section {
-    padding-top: 94px;
-  }
-}
-
 .styled {
   font-style: normal;
 }
 
 /* СТИЛІЗАЦІЯ СТУДІЇ- HTML */
 /* Синій колір для логотипу */
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
 @media screen and (min-width:1200px) {
   .logo-link {
     font-size: 26px;
@@ -137,12 +131,17 @@ img {
 
 /* Стилізація чорного кольору для логотипу */
 .logo-header {
+  padding-top: 16px;
+  padding-bottom: 16px;
+
   color: var(--first-logo-color);
 }
 
 @media screen and (min-width:768px) {
   .logo-header {
     margin-right: 88px;
+    padding-top: 26px;
+    padding-bottom: 26px;
   }
 }
 
@@ -154,22 +153,12 @@ img {
   }
 }
 
-.header-container {
-  display: flex;
-  align-items: center;
-}
-
-@media screen and (max-width: 767px) {
-  .header-container {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-}
-
 /* MOBILE MENU */
 
 .menu-button {
   padding: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
   margin-left: auto;
 
   display: inline-flex;
@@ -185,12 +174,12 @@ img {
   }
 }
 
-.menu-button .open-mobile {
+.menu-button>.open-mobile {
   transition: fill 250ms linear;
 }
 
-.menu-button .open-mobile:hover,
-.menu-button .open-mobile:focus {
+.menu-button:hover>.open-mobile,
+.menu-button:focus>.open-mobile {
   fill: var(--accent-color);
 }
 
@@ -198,11 +187,14 @@ img {
   position: absolute;
   top: 10px;
   right: 15px;
+
   padding: 0;
+
+  display: inline-flex;
+
   border: 0;
   background-color: transparent;
   cursor: pointer;
-  margin-left: auto;
 }
 
 .menu-toggle .close-mobile {
@@ -437,10 +429,10 @@ img {
 
 @media screen and (min-width: 1200px) {
   .auth.smartphone {
-    margin-left: 40px;
-    font-size: 14px;
     padding-top: 32px;
     padding-bottom: 32px;
+
+    font-size: 14px;
   }
 }
 
@@ -622,6 +614,8 @@ img {
   /* для моб екрану */
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 60px;
+
   padding-top: 118px;
   padding-bottom: 118px;
 
@@ -634,6 +628,12 @@ img {
   background-position: center;
   background-size: cover;
   background-color: var(--backgroud-color-hero);
+}
+
+@media screen and (min-width:1200px) {
+  .hero {
+    margin-bottom: 94px;
+  }
 }
 
 /* медіа запити з ретіною (для hero (фонових зображень) */
@@ -1007,9 +1007,13 @@ img {
 }
 
 /* СЕКЦІЯ ОСОБЛИВОСТІ  */
+.section-features {
+  margin-bottom: 60px;
+}
+
 @media screen and (min-width: 1200px) {
   .section-features {
-    padding-bottom: 94px;
+    margin-bottom: 94px;
   }
 }
 
@@ -1095,8 +1099,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .work {
-    display: flex;
-    padding-bottom: 94px;
+    margin-bottom: 94px;
   }
 }
 
@@ -1118,12 +1121,15 @@ img {
   }
 }
 
-.image-work {
-  display: block;
+.work-item {
+  position: relative;
+
+  width: 370px;
+  height: 294px;
 }
 
-.position-item {
-  position: relative;
+.work-item+.work-item {
+  margin-left: 30px;
 }
 
 .position-text {
@@ -1140,11 +1146,28 @@ img {
   color: white;
 }
 
-.work-item+.work-item {
-  margin-left: 30px;
+.image-work {
+  display: block;
 }
 
 /* стилізація секції наша команда */
+/* Колір фону для секції "наша команда */
+.team {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-bottom: 60px;
+
+  background-color: var(--background-color-team);
+}
+
+@media screen and (min-width: 1200px) {
+  .team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    margin-bottom: 94px;
+  }
+}
+
 .team-title {
   margin-bottom: 30px;
 
@@ -1252,29 +1275,14 @@ img {
   fill: currentColor;
 }
 
-/* Колір фону для секції "наша команда */
-.team {
-  background-color: var(--background-color-team);
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-@media screen and (min-width: 1200px) {
-  .team {
-    padding-top: 94px;
-    padding-bottom: 94px;
-  }
-}
-
+/* СТИЛІЗАЦІЯ СЕКЦІЇ "КЛІЄНТИ" */
 .clients {
-  padding-bottom: 60px;
-  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 @media screen and (min-width: 1200px) {
   .clients {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    margin-bottom: 94px;
   }
 }
 
