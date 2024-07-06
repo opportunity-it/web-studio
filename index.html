@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Студія</title>
+  <title>Веб студія</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
@@ -16,7 +16,7 @@
 </head>
 
 <body>
-  <!-- Заголовок -->
+  <!-- ЗАГОЛОВОК -->
   <header>
     <div class="container header-container">
       <a href="./index.html" class="underline logo-link logo-header"><span
@@ -33,7 +33,6 @@
             <use href="./images/sprite.svg#icon-close-mobile"></use>
           </svg>
         </button>
-
         <nav>
           <ul class="list navigation-list">
             <li class="navigation-item current-item">
@@ -78,45 +77,12 @@
           </li>
         </ul>
       </div>
-      <!-- Мобільне меню ЦЕ СТАРЕ-->
-      <!-- <button class="menu-button js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-        <svg class="burger-open" width="40" height="40" aria-label="кнопка відкриття мобільного меню">
-          <use href="./images/sprite.svg#icon-export-menu"></use>
-        </svg>
-      </button> -->
-      <!-- <div class="menu-container js-menu-container" id="mobile-menu">
-        <button class="menu-toggle js-close-menu">
-          <svg width="40" height="40" aria-label="кнопка закриття бургер меню">
-            <use href="./images/sprite.svg#icon-close-mobile"></use>
-          </svg>
-        </button>
-         <ul class="mobile-menu list">
-          <li class="mobile-menu-item">
-            <a class="mobile-menu-link" href="./index.html">Студія</a>
-          </li>
-          <li class="mobile-menu-item">
-            <a class="mobile-menu-link" href="./portfolio.html">Портфоліо</a>
-          </li>
-          <li class="mobile-menu-item">
-            <a class="mobile-menu-link" href="">Контакти </a>
-          </li>
-        </ul> -->
-      <!-- <ul class="mobile-contacts list">
-          <li class="mobile-contacts-item">
-            <a class="mobile-contacts-tel underline" href="tel:+380961111111">+38 096 111 11 11</a>
-          </li>
-          <li class="mob-contacts-item">
-            <a class="mobile-contacts-mail underline" href="mailto:info@devstudio.com">info@devstudio.com</a>
-          </li>
-        </ul> -->
-      <!--
-      </div> -->
     </div>
   </header>
   <main>
     <section class="hero centered">
       <div class="container">
-        <!-- Герой -->
+        <!-- ГЕРОЙ -->
         <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
         <button data-modal-open type="button" class="hero-button">Замовити послугу</button>
         <div class="backdrop is-hidden" data-modal>
@@ -174,10 +140,10 @@
         </div>
       </div>
     </section>
-    <!-- Особливості -->
+    <!-- ОСОБЛИВОСТІ -->
     <section class="section-features">
-      <!-- <h2>Особливості</h2> -->
       <div class="container">
+        <h2 class="visually-hidden">Features</h2>
         <ul class="list features-list">
           <li class="features-item">
             <div class="features-icon">
@@ -226,10 +192,10 @@
         </ul>
       </div>
     </section>
-    <!-- Робота    -->
-    <section class="work">
+    <!-- ТИПИ РОБІТ -->
+    <section class="work-type">
       <div class="container">
-        <h2 class="work-title centered">Чим ми займаємося</h2>
+        <h2 class="title centered">Чим ми займаємося</h2>
         <ul class="list work-list">
           <li class="work-item">
             <picture>
@@ -241,7 +207,7 @@
                     ./images/desktop-dodatky-desktop_370.jpg 1x,
                     ./images/desktop-dodatky-desktop_740.jpg 2x
                   " type="image/jpg" />
-              <img class="image-work" src="./images/desktop-dodatky-desktop_370.jpg " alt="робота з комп'ютером" />
+              <img class="image-work" src="./images/desktop-dodatky-desktop_370.jpg " alt="computer work" />
             </picture>
             <p class="position-text">Десктопні додатки</p>
           </li>
@@ -255,7 +221,7 @@
                     ./images/mobile-dodatky-desktop_370.jpg 1x,
                     ./images/mobile-dodatky-desktop_740.jpg 2x
                   " type="image/jpg" />
-              <img class="image-work" src="./images/mobile-dodatky-desktop_370.jpg" alt="робота з телефоном" />
+              <img class="image-work" src="./images/mobile-dodatky-desktop_370.jpg" alt="phone work" />
             </picture>
             <p class="position-text">Мобільні додатки</p>
           </li>
@@ -272,8 +238,7 @@
               <img class="image-work" srcset="
                     ./images/design-rishennya-desktop_370.jpg 1x,
                     ./images/design-rishennya-desktop_740.jpg 2x
-                  " src="./images/design-rishennya-desktop_370.jpg" alt="робота з планшетом" width="370"
-                height="294" />
+                  " src="./images/design-rishennya-desktop_370.jpg" alt="tablet work" width="370" height="294" />
             </picture>
 
             <p class="position-text">Дизайнерські рішення</p>
@@ -281,10 +246,10 @@
         </ul>
       </div>
     </section>
-    <!-- СЕКЦІЯ КОМАНДА -->
+    <!-- КОМАНДА -->
     <section class="team">
       <div class="container">
-        <h2 class="team-title centered">Наша команда</h2>
+        <h2 class="title centered">Наша команда</h2>
         <ul class="list team-list">
           <li class="team-item">
             <picture>
@@ -516,7 +481,6 @@
                 srcset="./images/mykhaylo-mob_450.jpg 1x, ./images/mykhaylo-mob_900.jpg 2x" type="image/jpg" />
               <img class="team-img" src="./images/mykhaylo-mob_450.jpg" alt="UI Designer" />
             </picture>
-
             <!-- <img class="team-img" 
                             srcset="
                          ./images/mykhaylo-mob_450.jpg 450w,
@@ -570,10 +534,10 @@
         </ul>
       </div>
     </section>
-    <!-- СЕКЦІЯ КЛІЄНТИ  -->
+    <!-- КЛІЄНТИ  -->
     <section class="clients">
       <div class="container">
-        <h2 class="clients-title centered">Постійні клієнти</h2>
+        <h2 class="title centered">Постійні клієнти</h2>
         <ul class="clients-list list">
           <li class="clients-item">
             <a class="clients-link" href="" aria-label="Посилання на Ya-Co" target="_blank"
@@ -627,7 +591,7 @@
       </div>
     </section>
   </main>
-  <!-- Підлога -->
+  <!-- ФУТЕР -->
   <footer class="main-footer centered">
     <div class="container container-footer">
       <div class="logo-wrapper">

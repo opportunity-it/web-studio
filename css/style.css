@@ -70,6 +70,25 @@ body.modal-open {
   }
 }
 
+/* заголовки */
+.title {
+  margin-bottom: 30px;
+  font-size: 28px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+  color: var(--main-color-text);
+}
+
+@media screen and (min-width: 1200px) {
+  .title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    color: var(--main-color-text);
+  }
+}
+
 /* Зняття маркерів */
 .list {
   list-style: none;
@@ -108,6 +127,20 @@ img {
 
 .styled {
   font-style: normal;
+}
+
+/* Прихований заголовок */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* СТИЛІЗАЦІЯ СТУДІЇ- HTML */
@@ -205,11 +238,6 @@ img {
 .menu-toggle:focus {
   fill: var(--accent-color);
 }
-
-/* .burger-open:hover,
-.burger-open:focus {
-  fill: var(--accent-color);
-} */
 
 @media screen and (min-width: 768px) {
   .menu-toggle {
@@ -523,59 +551,6 @@ img {
     height: 12px;
   }
 }
-
-
-
-
-
-
-
-
-
-/* .mobile-menu {
-  margin-bottom: auto;
-} */
-
-/* .mobile-menu-item:not(:last-child) {
-  margin-bottom: 32px;
-} */
-
-/* .mobile-menu-link {
-
-} */
-
-/* .mobile-menu-link:hover,
-.mobile-menu-link:focus {
-  color: var(--accent-color);
-} */
-
-/* .mobile-contacts-item {
-  margin-bottom: 32px;
-} */
-
-/* .mobile-contacts-tel {
-  font-weight: 500;
-  font-size: 34px;
-  line-height: 1.17;
-  color: var(--main-color-text);
-  letter-spacing: 0.02em;
-} */
-
-/* .mobile-contacts-tel:hover,
-.mobile-contacts-tel:focus {
-  color: var(--accent-color);
-} */
-
-/* .mob-contacts-item {
-  margin-bottom: 64px;
-} */
-
-/* .mobile-contacts-mail {
-  font-size: 24px;
-  line-height: 1.16;
-  letter-spacing: 0.02em;
-  color: var(--second-color-text);
-} */
 
 /* стилізація соціальних мереж мобільного меню  */
 .mobile-social {
@@ -1092,26 +1067,14 @@ img {
 
 /* стилізація секції "робота" */
 @media screen and (max-width:1199px) {
-  .work {
+  .work-type {
     display: none;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .work {
+  .work-type {
     margin-bottom: 94px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .work-title {
-    margin-bottom: 50px;
-
-    font-size: 36px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-
-    color: var(--main-color-text);
   }
 }
 
@@ -1168,24 +1131,7 @@ img {
   }
 }
 
-.team-title {
-  margin-bottom: 30px;
 
-  font-size: 28px;
-  line-height: 1.18;
-  letter-spacing: 0.03em;
-
-  color: var(--main-color-text);
-}
-
-@media screen and (min-width: 1200px) {
-  .team-title {
-    margin-bottom: 50px;
-
-    font-size: 36px;
-    line-height: 1.17;
-  }
-}
 
 @media screen and (max-width:767px) {
   .team-list {
@@ -1283,26 +1229,6 @@ img {
 @media screen and (min-width: 1200px) {
   .clients {
     margin-bottom: 94px;
-  }
-}
-
-.clients-title {
-  margin-bottom: 30px;
-
-  font-size: 28px;
-  line-height: 1.18;
-  letter-spacing: 0.03em;
-
-  color: var(--main-color-text);
-}
-
-@media screen and (min-width: 1200px) {
-  .clients-title {
-    margin-bottom: 50px;
-
-    font-size: 36px;
-    line-height: 1.17;
-    letter-spacing: 1.08px;
   }
 }
 
@@ -1667,20 +1593,6 @@ img {
   border-radius: 2px;
   bottom: 0;
   left: 0;
-}
-
-/* Прихований заголовок */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 .header-portfolio {
