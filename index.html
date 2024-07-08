@@ -98,7 +98,7 @@
                 передзвонимо</strong>
               <div role="group" aria-labelledby="зворотний-зв'язок-з-користувачем">
                 <div class="form-field">
-                  <label for="name" class="label-name form-style-text">Ім'я</label>
+                  <label for="name" class="form-style-text">Ім'я</label>
                   <input type="text" name="name" id="name" class="input-style" required
                     placeholder="Андрій Андрійович" />
                   <svg class="icon-modal" width="18px" height="18px">
@@ -106,7 +106,7 @@
                   </svg>
                 </div>
                 <div class="form-field">
-                  <label for="tel" class="label-tel form-style-text">Телефон</label>
+                  <label for="tel" class="form-style-text">Телефон</label>
                   <input type="tel" name="tel" id="tel" class="input-style" required placeholder="+38 000 000 00 00"
                     minlength="12" maxlength="12" />
                   <svg class="icon-modal" width="18px" height="18px">
@@ -114,15 +114,15 @@
                   </svg>
                 </div>
                 <div class="form-field">
-                  <label for="mail" class="label-mail form-style-text">Пошта</label>
+                  <label for="mail" class="form-style-text">Пошта</label>
                   <input type="email" name="mail" id="mail" class="input-style" required placeholder="post@mail.com" />
                   <svg class="icon-modal" width="18px" height="18px">
                     <use href="./images/sprite.svg#email"></use>
                   </svg>
                 </div>
-                <div class="form-field">
-                  <label for="comment" class="comment-label form-style-text">Коментар</label>
-                  <textarea name="comment" id="comment" rows="5" class="comment input-style"
+                <div class="form-field textarea">
+                  <label for="comment" class="form-style-text">Коментар</label>
+                  <textarea name="comment" id="comment" rows="5" class="input-style comment"
                     placeholder="Введіть текст"></textarea>
                 </div>
               </div>
@@ -130,8 +130,8 @@
                 <label for="policy" class="label-checkbox">
                   <input type="checkbox" name="checkbox" id="policy" class="input-checkbox" />
                   <span class="icon-check-form"></span>
-                  <span class="text-checkbox">Погоджуюся з розсилкою та приймаю
-                    <a href="" class="form-link">Умови договору</a></span>
+                  <span class="text-checkbox"><span>Погоджуюся з розсилкою та приймаю</span>
+                    <a href="" class="text-checkbox form-link">Умови договору</a></span>
                 </label>
               </div>
               <button type="submit" class="form-btn">Відправити</button>
