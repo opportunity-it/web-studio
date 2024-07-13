@@ -1165,7 +1165,7 @@ z-index: 9;
   }
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:1200px) {
   .team-list>.team-item {
     flex-basis: calc((100% - 90px) / 4);
   }
@@ -1653,19 +1653,34 @@ z-index: 9;
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-@media screen and (min-width: 1200px) {
-  .flex-container {
+@media screen and (min-width: 768px) {
+  .projects-list {
     display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .projects-list {
     flex-wrap: wrap;
   }
 }
 
 .flex-item {
   max-width: 450px;
-  /* margin-left: 0; */
   /* flex-basis: calc((100% - 60px) / 3); */
-  /* margin-right: 30px; */
+}
 
+@media screen and (max-width:767px) {
+  .flex-item{
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .flex-item:last-child {
+    margin-bottom: 0px;
+  }
 }
 
 /* @media screen and (min-width: 1200px) {
@@ -1747,21 +1762,20 @@ z-index: 9;
 
 /* Стилізація заголовка */
 .header-text {
-  padding-top: 20px;
-  padding-right: 24px;
-  padding-bottom: 20px;
-  padding-left: 24px;
+   padding: 20px 24px 20px 24px;
+   
   border-right: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
 }
 
 .header-img {
-  color: var(--main-color-text);
-  font-weight: 700;
+    font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+
+  color: var(--main-color-text);
 }
 
 /* Стилізація опису */
