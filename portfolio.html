@@ -18,69 +18,69 @@
 <body>
   <!-- Заголовок -->
   <header class="header-portfolio">
-      <div class="container header-container">
-        <a href="./index.html" class="underline logo-link logo-header"><span
-            class="span-logo">Web</span><span>Studio</span></a>
-        <!-- МОБІЛЬНЕ МЕНЮ НОВЕ -->
-        <button class="menu-button js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-          <svg class="open-mobile" width="40" height="40" aria-label="кнопка відкриття мобільного меню">
-            <use href="./images/sprite.svg#icon-export-menu"></use>
+    <div class="container header-container">
+      <a href="./index.html" class="underline logo-link logo-header"><span
+          class="span-logo">Web</span><span>Studio</span></a>
+      <!-- МОБІЛЬНЕ МЕНЮ НОВЕ -->
+      <button class="menu-button js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="open-mobile" width="40" height="40" aria-label="кнопка відкриття мобільного меню">
+          <use href="./images/sprite.svg#icon-export-menu"></use>
+        </svg>
+      </button>
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="menu-toggle js-close-menu">
+          <svg class="close-mobile" width="40" height="40" aria-label="кнопка закриття бургер меню">
+            <use href="./images/sprite.svg#icon-close-mobile"></use>
           </svg>
         </button>
-        <div class="menu-container js-menu-container" id="mobile-menu">
-          <button class="menu-toggle js-close-menu">
-            <svg class="close-mobile" width="40" height="40" aria-label="кнопка закриття бургер меню">
-              <use href="./images/sprite.svg#icon-close-mobile"></use>
-            </svg>
-          </button>
-          <nav>
-            <ul class="list navigation-list">
-              <li class="navigation-item">
-                <a href="./index.html" class="underline nav">Студія</a>
-              </li>
-              <li class="navigation-item current-item">
-                <a class="underline nav current-portfolio" href="./portfolio.html">Портфоліо</a>
-              </li>
-              <li class="navigation-item">
-                <a href="" class="underline nav contacts">Контакти</a>
-              </li>
-            </ul>
-          </nav>
-          <ul class="list authentication-list">
-            <li class="authentication-item">
-              <a href="tel:+380961111111" class="underline auth smartphone">
-                <svg class="icon-smartphone" width="10" height="14">
-                  <use href="./images/sprite.svg#icon-smartphone"></use>
-                </svg>
-                +38 096 111 11 11</a>
+        <nav>
+          <ul class="list navigation-list">
+            <li class="navigation-item">
+              <a href="./index.html" class="underline nav">Студія</a>
             </li>
-            <li class="authentication-item">
-              <a href="mailto:info@devstudio.com" class="underline auth mail">
-                <svg class="icon-envelope" width="14" height="10">
-                  <use href="./images/sprite.svg#icon-envelope"></use>
-                </svg>
-                info@devstudio.com</a>
+            <li class="navigation-item current-item">
+              <a class="underline nav current-portfolio" href="./portfolio.html">Портфоліо</a>
+            </li>
+            <li class="navigation-item">
+              <a href="" class="underline nav contacts">Контакти</a>
             </li>
           </ul>
-          <ul class="list mobile-social">
-            <li class="mobile-social-item">
-              <a class="mobile-social-link" href="" target="_blank" rel="noopener nofollow noreferrer">Instagram</a>
-            </li>
-            <li class="mobile-social-item">
-              <a class="mobile-social-link" href="" target="_blank" rel="noopener nofollow noreferrer">Twitter</a>
-            </li>
-            <li class="mobile-social-item">
-              <a class="mobile-social-link" href="" target="_blank" rel="noopener nofollow noreferrer">Facebook</a>
-            </li>
-            <li class="mobile-social-item">
-              <a class="mobile-social-link" href="" target="_blank" rel="noopener nofollow noreferrer">LinkedIn</a>
-            </li>
-          </ul>
-        </div>
+        </nav>
+        <ul class="list authentication-list">
+          <li class="authentication-item">
+            <a href="tel:+380961111111" class="underline auth smartphone">
+              <svg class="icon-smartphone" width="10" height="14">
+                <use href="./images/sprite.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11</a>
+          </li>
+          <li class="authentication-item">
+            <a href="mailto:info@devstudio.com" class="underline auth mail">
+              <svg class="icon-envelope" width="14" height="10">
+                <use href="./images/sprite.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com</a>
+          </li>
+        </ul>
+        <ul class="list mobile-social">
+          <li class="mobile-social-item">
+            <a class="mobile-social-link" href="" target="_blank" rel="noopener nofollow noreferrer">Instagram</a>
+          </li>
+          <li class="mobile-social-item">
+            <a class="mobile-social-link" href="" target="_blank" rel="noopener nofollow noreferrer">Twitter</a>
+          </li>
+          <li class="mobile-social-item">
+            <a class="mobile-social-link" href="" target="_blank" rel="noopener nofollow noreferrer">Facebook</a>
+          </li>
+          <li class="mobile-social-item">
+            <a class="mobile-social-link" href="" target="_blank" rel="noopener nofollow noreferrer">LinkedIn</a>
+          </li>
+        </ul>
       </div>
+    </div>
   </header>
   <main>
-<!-- НАШІ ПРОЕКТИ -->
+    <!-- НАШІ ПРОЕКТИ -->
     <section>
       <div class="container">
         <h1 class="visually-hidden">Наші проекти</h1>
@@ -106,26 +106,33 @@
             <a href="" class="link underline flex-link" aria-label="Посилання на Технокряк" target="_blank"
               rel="noopener nofollow noreferrer">
               <div class="img-overlay">
-
-          <picture>
-            <!-- desktop -->
+                <!-- <picture>
+            desktop
             <source media="(min-width: 1200px)" srcset="./images/ihor-desktop_270.webp 1x, ./images/ihor-desktop_540.webp 2x"
               type="image/webp" />
             <source media="(min-width: 1200px)" srcset="./images/ihor-desktop_270.jpg 1x, ./images/ihor-desktop_540.jpg 2x"
               type="image/jpg" />
-            <!-- tablet -->
+            tablet
             <source media="(min-width: 768px)" srcset="./images/ihor-tablet_354.webp 1x, ./images/ihor-tablet_708.webp 2x"
               type="image/webp" />
             <source media="(min-width: 768px)" srcset="./images/ihor-tablet_354.jpg 1x, ./images/ihor-tablet_708.jpg 2x"
               type="image/jpg" />
-            <!-- mobile -->
+            mobile
             <source media="(max-width: 767px)" srcset="./images/ihor-mob_450.webp 1x, ./images/ihor-mob_900.webp 2x"
               type="image/webp" />
             <source media="(max-width: 767px)" srcset="./images/portfolio/projects/technokryak-mob_450.jpg 1x, ./images/portfolio/projects/technokryak-mob_900.jpg 2x"
-              type="image/jpg" />
+              type="image/jpg" />  -->
+                <!-- </picture> -->
 
-                <img class="flex-img" src="./images/portfolio/projects/technokryak-mob_450.jpg" alt="Веб-сайт" />
-          </picture>
+                <img class="flex-img" src="./images/portfolio/projects/technokryak-mob_450.jpg" alt="Веб-сайт"
+                  width="450" height="294" srcset="
+                  ./images/portfolio/projects/technokryak-tablet_354.jpg 354w,
+                  ./images/portfolio/projects/technokryak-desktop_370.jpg 370w,
+                  ./images/portfolio/projects/technokryak-mob_450.jpg 450w,
+                  ./images/portfolio/projects/technokryak-tablet_708.jpg 708w,
+                  ./images/portfolio/projects/technokryak-desktop_740.jpg 740w,
+                  ./images/portfolio/projects/technokryak-mob_900.jpg 900w "
+                  sizes="(min-width:1200px) 370px, (min-width:768px) 354px, (min-width:480px) 450px, 100vw" />
                 <div class="wrapper-text">
                   <p class="flex-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -277,7 +284,8 @@
             <a href="" class="link underline flex-link" aria-label="Посилання на додаток Growing Business"
               target="_blank" rel="noopener noreferrer nofollow">
               <div class="img-overlay">
-                <img class="flex-img" src="./images/portfolio/projects/computer-work-mob_450.jpg" alt="Робота за комп" />
+                <img class="flex-img" src="./images/portfolio/projects/computer-work-mob_450.jpg"
+                  alt="Робота за комп" />
                 <div class="wrapper-text">
                   <p class="flex-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
