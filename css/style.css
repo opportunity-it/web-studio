@@ -383,13 +383,16 @@ z-index: 9;
 }
 
 /* Стилізація контактів */
-.contacts {
+.contacts,
+.studio {
   color: var(--main-color-text);
 }
 
 /*  Стилізація контаків-ефект ховеру, фокусу */
 .contacts:hover,
-.contacts:focus {
+.contacts:focus,
+.studio:hover,
+.studio:focus {
   color: var(--accent-color);
 }
 
