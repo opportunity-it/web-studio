@@ -29,8 +29,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  font-display: swap;
-  color: var(--main-color-text);
+    color: var(--main-color-text);
   background-color: var(--first-background);
 }
 
