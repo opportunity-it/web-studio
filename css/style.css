@@ -19,7 +19,7 @@
   --first-logo-color: rgba(0, 0, 0, 1);
   --main-color-text: #212121;
   --second-color-text: #757575;
-  --font-family: 'Roboto', sans-serif;
+  --font-family: "Roboto", sans-serif;
   --footer-main-color-text: rgba(255, 255, 255, 0.6);
   --footer-background-color: #2f303a;
   --backgroud-color-hero: #2f303a;
@@ -28,8 +28,8 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-    color: var(--main-color-text);
+  font-family: "Roboto", sans-serif;
+  color: var(--main-color-text);
   background-color: var(--first-background);
 }
 
@@ -116,7 +116,7 @@ img {
 }
 
 .logo-link {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 1.17;
@@ -260,7 +260,9 @@ img {
     transform: translateX(100%);
     display: none;
 
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    box-shadow:
+      0px 4px 8px rgba(0, 0, 0, 0.04),
+      0px 2px 4px rgba(0, 0, 0, 0.08),
       0px 1px 3px rgba(0, 0, 0, 0.16);
 
     /* transition: transform 500ms linear, visibility 500ms linear, opacity 500ms linear; */
@@ -345,7 +347,7 @@ img {
 
 .current-studio::after,
 .current-portfolio::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -571,7 +573,7 @@ img {
 }
 
 .mobile-social-item:not(:first-child)::before {
-  content: ' ';
+  content: " ";
   width: 22px;
   height: 0;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -601,31 +603,23 @@ img {
   background-color: var(--backgroud-color-hero);
 }
 
-@media screen and (min-width: 1200px) {
-  .hero {
-    margin-bottom: 94px;
-  }
-}
-
 /* медіа запити з ретіною (для hero (фонових зображень) */
-/* екран доівнює або більший ніж 769px  */
-@media screen and (min-width: 769px) and (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
+/* екран, до 480px включно - з ретіною */
+@media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/studio/hero/hero-img-desktop_3200.webp);
-  }
-}
-
-@media screen and (min-width: 769px) {
-  .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/studio/hero/hero-img-desktop_1600.webp);
+      url(../images/studio/hero/hero-img-mobile_960.webp);
   }
 }
 
 /* екран доівнює або більший ніж 481px */
+@media screen and (min-width: 481px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/studio/hero/hero-img-tablet_768.webp);
+  }
+}
+
 @media screen and (min-width: 481px) and (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
@@ -635,17 +629,19 @@ img {
   }
 }
 
-@media screen and (min-width: 481px) {
+/* екран доівнює або більший ніж 769px  */
+@media screen and (min-width: 769px) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/studio/hero/hero-img-tablet_768.webp);
+      url(../images/studio/hero/hero-img-desktop_1600.webp);
   }
 }
-
-@media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@media screen and (min-width: 769px) and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/studio/hero/hero-img-mobile_960.webp);
+      url(../images/studio/hero/hero-img-desktop_3200.webp);
   }
 }
 
@@ -653,6 +649,7 @@ img {
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
+    margin-bottom: 94px;
   }
 }
 
@@ -698,7 +695,8 @@ img {
   border-radius: 4px;
 
   border: transparent;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition:
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -720,7 +718,8 @@ img {
 
   overflow-y: scroll;
 
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition:
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -743,7 +742,9 @@ img {
 
   border-radius: 4px;
   background-color: #fff;
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+  box-shadow:
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14),
     0px 2px 1px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -1138,7 +1139,9 @@ img {
 
 /* Добавлення кольору фону для li */
 .team-list > .team-item {
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+  box-shadow:
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14),
     0px 2px 1px 0px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   padding-bottom: 24px;
@@ -1209,7 +1212,8 @@ img {
   border-radius: 50%;
   color: #afb1b8;
   background-color: var(--first-background);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition:
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1273,7 +1277,9 @@ img {
   color: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover,
@@ -1607,7 +1613,8 @@ img {
   border: none;
   background-color: var(--background-color-team);
   border-radius: 4px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition:
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1615,7 +1622,9 @@ img {
 .button-item.active {
   color: var(--first-background);
   background-color: var(--accent-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+  box-shadow:
+    0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
@@ -1625,7 +1634,9 @@ img {
 .button-item:focus {
   color: var(--first-background);
   background-color: var(--accent-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+  box-shadow:
+    0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
@@ -1683,7 +1694,9 @@ img {
 
 .flex-link:hover,
 .flex-link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+  box-shadow:
+    0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -1701,7 +1714,8 @@ img {
   background-color: rgba(33, 150, 243, 0.9);
   opacity: 0;
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition:
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
