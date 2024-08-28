@@ -19,7 +19,7 @@
   --first-logo-color: rgba(0, 0, 0, 1);
   --main-color-text: #212121;
   --second-color-text: #757575;
-  --font-family: "Roboto", sans-serif;
+  --font-family: 'Roboto', sans-serif;
   --footer-main-color-text: rgba(255, 255, 255, 0.6);
   --footer-background-color: #2f303a;
   --backgroud-color-hero: #2f303a;
@@ -28,7 +28,7 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: var(--main-color-text);
   background-color: var(--first-background);
 }
@@ -116,7 +116,7 @@ img {
 }
 
 .logo-link {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 1.17;
@@ -247,26 +247,26 @@ img {
 
 @media screen and (max-width: 767px) {
   .menu-container {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    min-height: 796px;
+    width: 100vw;
+    height: 100vh;
 
     padding: 48px 40px;
 
+display: none;
+
     background-color: var(--first-background);
 
-    transform: translateX(100%);
-    display: none;
+    /* transform: translateX(100%); */
 
-    box-shadow:
-      0px 4px 8px rgba(0, 0, 0, 0.04),
-      0px 2px 4px rgba(0, 0, 0, 0.08),
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
       0px 1px 3px rgba(0, 0, 0, 0.16);
 
-    /* transition: transform 500ms linear, visibility 500ms linear, opacity 500ms linear; */
+    /* transition: transform 2000ms linear; */
 
+    overflow-y: scroll;
     /* visibility: hidden; */
     /* opacity: 0; */
   }
@@ -285,7 +285,8 @@ img {
   flex-direction: column;
   justify-content: space-between;
 
-  transform: translateX(0);
+  display: block;
+  /* transform: translateX(0); */
 
   /* opacity: 1; */
   /* visibility: initial; */
@@ -347,7 +348,7 @@ img {
 
 .current-studio::after,
 .current-portfolio::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -573,7 +574,7 @@ img {
 }
 
 .mobile-social-item:not(:first-child)::before {
-  content: " ";
+  content: ' ';
   width: 22px;
   height: 0;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -695,8 +696,7 @@ img {
   border-radius: 4px;
 
   border: transparent;
-  transition:
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -718,8 +718,7 @@ img {
 
   overflow-y: scroll;
 
-  transition:
-    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -730,22 +729,28 @@ img {
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%);
+  transform: scale(0.5);
+}
+
+@media screen and (min-width: 768px) {
+  .backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
 }
 
 .modal {
   position: relative;
 
-  width: 100%;
-
   padding: 40px;
 
   border-radius: 4px;
   background-color: #fff;
-  box-shadow:
-    0px 1px 3px 0px rgba(0, 0, 0, 0.12),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
     0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+
+  transform: scale(1);
+
+  transition: transform 250ms linear;
 }
 
 @media screen and (min-width: 768px) {
@@ -755,9 +760,10 @@ img {
     left: 50%;
 
     max-width: 450px;
+    width: 100%;
     min-height: 609px;
 
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
   }
 }
 
@@ -1139,9 +1145,7 @@ img {
 
 /* Добавлення кольору фону для li */
 .team-list > .team-item {
-  box-shadow:
-    0px 1px 3px 0px rgba(0, 0, 0, 0.12),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
     0px 2px 1px 0px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   padding-bottom: 24px;
@@ -1212,8 +1216,7 @@ img {
   border-radius: 50%;
   color: #afb1b8;
   background-color: var(--first-background);
-  transition:
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1277,9 +1280,7 @@ img {
   color: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  transition:
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover,
@@ -1613,8 +1614,7 @@ img {
   border: none;
   background-color: var(--background-color-team);
   border-radius: 4px;
-  transition:
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1622,9 +1622,7 @@ img {
 .button-item.active {
   color: var(--first-background);
   background-color: var(--accent-color);
-  box-shadow:
-    0px 3px 1px rgba(0, 0, 0, 0.1),
-    0px 1px 2px rgba(0, 0, 0, 0.08),
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
@@ -1634,9 +1632,7 @@ img {
 .button-item:focus {
   color: var(--first-background);
   background-color: var(--accent-color);
-  box-shadow:
-    0px 3px 1px rgba(0, 0, 0, 0.1),
-    0px 1px 2px rgba(0, 0, 0, 0.08),
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
@@ -1694,9 +1690,7 @@ img {
 
 .flex-link:hover,
 .flex-link:focus {
-  box-shadow:
-    0px 1px 1px rgba(0, 0, 0, 0.12),
-    0px 4px 4px rgba(0, 0, 0, 0.06),
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -1714,8 +1708,7 @@ img {
   background-color: rgba(33, 150, 243, 0.9);
   opacity: 0;
   transform: translateY(100%);
-  transition:
-    transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
