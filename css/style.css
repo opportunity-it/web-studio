@@ -145,6 +145,12 @@ img {
 
 /* СТИЛІЗАЦІЯ СТУДІЇ- HTML */
 /* Синій колір для логотипу */
+@media screen and (max-width:767px) {
+  .header{
+    padding-top: 10px;padding-bottom: 10px;
+  }
+}
+
 .header-container {
   display: flex;
   align-items: center;
@@ -164,9 +170,6 @@ img {
 
 /* Стилізація чорного кольору для логотипу */
 .logo-header {
-  padding-top: 16px;
-  padding-bottom: 16px;
-
   color: var(--first-logo-color);
 }
 
@@ -190,8 +193,6 @@ img {
 
 .menu-button {
   padding: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
   margin-left: auto;
 
   display: inline-flex;
