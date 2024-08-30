@@ -255,7 +255,7 @@ img {
 
     padding: 48px 40px;
 
-display: none;
+    display: none;
 
     background-color: var(--first-background);
 
@@ -563,6 +563,11 @@ display: none;
   }
 }
 
+.mobile-social-item{
+  display: flex;
+  align-items: center;
+}
+
 .mobile-social-link {
   font-weight: 500;
   font-size: 18px;
@@ -574,12 +579,14 @@ display: none;
 
 .mobile-social-item:not(:first-child)::before {
   content: ' ';
-  width: 22px;
-  height: 0;
+
+  display: block;
+
+  width: 24px;
+height: 1px;
+
   border: 1px solid rgba(33, 33, 33, 0.2);
   transform: rotate(90deg);
-  margin-right: 10px;
-  margin: 10px;
 }
 
 /* Стилізація  фону "героя" */
