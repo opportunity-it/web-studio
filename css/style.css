@@ -369,28 +369,17 @@ img {
   }
 }
 
-/* Стилізація портфоліо для html */
+/* Стилізація кольору студії та портфоліо */
+.studio ,
 .portfolio {
   color: var(--main-color-text);
 }
 
-/* Стилізація портфоліо-ефект фокус і ховер */
-.portfolio:hover,
-.portfolio:focus {
-  color: var(--accent-color);
-}
-
-/* Стилізація контактів */
-.contacts,
-.studio {
-  color: var(--main-color-text);
-}
-
-/*  Стилізація контаків-ефект ховеру, фокусу */
-.contacts:hover,
-.contacts:focus,
+/* Стилізація студії, портфоліо-ефект фокус і ховер */
 .studio:hover,
-.studio:focus {
+.studio:focus,
+.portfolio:hover,
+.portfolio:focus{
   color: var(--accent-color);
 }
 
