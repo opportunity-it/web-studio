@@ -286,7 +286,6 @@ img {
   flex-direction: column;
   justify-content: space-between;
 
-  display: block;
   /* transform: translateX(0); */
 
   /* opacity: 1; */
