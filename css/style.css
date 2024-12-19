@@ -544,6 +544,7 @@ img {
 /* стилізація соціальних мереж мобільного меню  */
 .mobile-social {
   display: flex;
+  flex-wrap: wrap;
 }
 
 @media screen and (min-width: 768px) {
